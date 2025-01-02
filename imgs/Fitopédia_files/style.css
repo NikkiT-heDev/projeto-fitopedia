@@ -24,6 +24,7 @@ header{
 
 #logo-navbar{
     width: 100px; 
+
 }
 
 #tema-do-site{
@@ -36,8 +37,6 @@ header{
     border-radius: 20px;
     border: 2px solid rgb(58, 21, 0);
     background: rgb(255, 255, 255);
-
-    transition: .5s;
 }
 
 #tema-atual{
@@ -45,7 +44,6 @@ header{
     height: 25px;
     background-image: url(../imgs/icons/sol.png); 
     background-size: 100% auto;
-    transition: .7s;
 }
 
 #home-inicial{
@@ -54,6 +52,7 @@ header{
     display: flex;
     align-items: center;
     padding: 50px;
+    width: 100%;
 }
 
 #home-inicial p{
@@ -87,30 +86,10 @@ header{
 #barra{
     height: 15px;
     width: 400px;
-    border: 0px;
-    border-bottom: 1px solid black;
+    border-radius: 20px;
+    border: 1px solid;
     padding: 10px;
     background: none;
-    transition: .5s;
-}
-
-#barra:focus{
-    border-radius: 20px;
-    outline: none;
-    border: 1px solid black;
-}
-
-#button-pesquisar{
-    display: none;
-}
-
-#button-pesquisar img{
-    opacity: 0;
-    transition: opacity .5s ease;
-}
-
-#button-pesquisar img:hover{
-    cursor: pointer;
 }
 
 #animacao-home{
@@ -127,6 +106,7 @@ header{
 
     height: 450px;
     width: 100%;
+    background-color: #99ed00;
 }
 
 #triangulo1{
@@ -201,21 +181,6 @@ header{
     animation: tr3 3s linear 2s infinite;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @keyframes tr3 {
     0%{
@@ -446,3 +411,10 @@ header{
     background-color: rgb(7, 89, 160);
 }
 
+@media only screen and (max-width: 1000px) {    
+    #banner-h1 { font-size: 50px; }    
+    #imagem-banner { display: none;}
+    #home-inicial{ justify-content: center; text-align: center;}
+    #home-inicial p{margin-top: -35px; font-size: 15px;}
+    #banner{  }
+}

@@ -1,0 +1,8 @@
+@media only screen and (max-width: 850px) {    
+    #banner-h1 { font-size: 45px; }    
+    #imagem-banner { display: none;}
+    #home-inicial{ justify-content: center; text-align: center; width: 100%; padding: 0;}
+    #home-inicial p{margin-top: -42px; font-size: 10px;}
+    #banner{ width: 100%;}
+    #animacao-home{margin: 0;}
+}

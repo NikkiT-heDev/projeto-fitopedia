@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Bubbleboddy Neue Trial';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Bubbleboddy Neue Trial'), url('https://fonts.cdnfonts.com/s/18491/bubbleboddyneue-regular trial.woff') format('woff');
+}
+@font-face {
+    font-family: 'Bubbleboddy Neue Trial';
+    font-style: normal;
+    font-weight: 200;
+    src: local('Bubbleboddy Neue Trial'), url('https://fonts.cdnfonts.com/s/18491/BubbleboddyNeue-Thin Trial.woff') format('woff');
+}
+@font-face {
+    font-family: 'Bubbleboddy Neue Trial';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Bubbleboddy Neue Trial'), url('https://fonts.cdnfonts.com/s/18491/BubbleboddyNeue-Light Trial.woff') format('woff');
+}
+@font-face {
+    font-family: 'Bubbleboddy Neue Trial';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Bubbleboddy Neue Trial'), url('https://fonts.cdnfonts.com/s/18491/BubbleboddyNeue-Bold Trial.woff') format('woff');
+}
+@font-face {
+    font-family: 'Bubbleboddy Neue Trial';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Bubbleboddy Neue Trial'), url('https://fonts.cdnfonts.com/s/18491/BubbleboddyNeue-ExtraBold Trial.woff') format('woff');
+}
+
+
