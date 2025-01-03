@@ -446,3 +446,68 @@ header{
     background-color: rgb(7, 89, 160);
 }
 
+
+/*sobre*/
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Espaçamento entre as seções */
+    margin: 30% auto;
+    width: 90%;
+    max-width: 1200px;
+    color: #012200;
+}
+
+/* Organização de cada seção */
+.conteudo {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os elementos */
+    gap: 20px; /* Espaçamento entre os elementos */
+}
+
+/* Estilo dos títulos */
+#titulo-sobre-site, #titulo-sobre-nos {
+    flex: 1; /* Ocupa 1 parte do espaço disponível */
+    text-align: left;
+    font-size: 4em;
+    color: #012200;
+}
+
+/* Caixa central */
+.caixa {
+    flex: 0 0 5px; /* Largura fixa */
+    height: 220px;
+    background: linear-gradient(to bottom, #3bed00, #012200);
+    border-radius: 5px;
+}
+
+/* Estilo dos textos */
+#texto-sobre-site, #texto-sobre-nos {
+    flex: 2; /* Ocupa 2 partes do espaço disponível */
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: justify;
+    color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #titulo-sobre-site, #titulo-sobre-nos {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    #texto-sobre-site, #texto-sobre-nos {
+        font-size: 1em;
+    }
+
+    .caixa {
+        height: 150px;
+    }
+}
