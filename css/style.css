@@ -12,6 +12,7 @@ header{
     background-image: linear-gradient(to left, #99ed00,#408602);
 
     border-end-end-radius: 50px;
+    z-index: 1;
 
 }
 
@@ -20,6 +21,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1;
 }
 
 #logo-navbar{
@@ -452,7 +454,7 @@ header{
 .sobre {
     display: flex;
     flex-direction: column;
-    gap: 50px; /* Espaçamento entre as seções */
+    gap: 150px; /* Espaçamento entre as seções */
     margin: 30% auto;
     width: 90%;
     max-width: 1200px;
