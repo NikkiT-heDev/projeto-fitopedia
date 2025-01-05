@@ -3,6 +3,6 @@
     #imagem-banner { display: none;}
     #home-inicial{ justify-content: center; text-align: center; width: 100%; padding: 0;}
     #home-inicial p{margin-top: -42px; font-size: 10px;}
-    #banner{ width: 100%;}
+    #banner{ width: 100%; margin-top: 25px}
     #animacao-home{margin: 0;}
 }

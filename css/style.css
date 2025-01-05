@@ -2,17 +2,15 @@ body{
     background-color: #ffffff;
     margin: 0;
     font-family: 'Bubbleboddy Neue Trial', sans-serif;
+    transition: 0.5s;
 }
 
 header{
     position: sticky;
     top: 0;
     padding: 10px 50px;
-
+    transition: 1s;
     background-image: linear-gradient(to left, #99ed00,#408602);
-
-    border-end-end-radius: 50px;
-
 }
 
 .navbar{
@@ -35,8 +33,9 @@ header{
 
     border-radius: 20px;
     border: 2px solid rgb(58, 21, 0);
-    background: rgb(255, 255, 255);
+    background: rgb(216, 214, 219);
 
+    filter: brightness(50px);
     transition: .5s;
 }
 
@@ -49,7 +48,7 @@ header{
 }
 
 #home-inicial{
-    color: rgb(43, 98, 0);
+    color: #2b6200;
     text-align: center;
     display: flex;
     align-items: center;
@@ -88,7 +87,7 @@ header{
     height: 15px;
     width: 400px;
     border: 0px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid;
     padding: 10px;
     background: none;
     transition: .5s;
@@ -97,7 +96,8 @@ header{
 #barra:focus{
     border-radius: 20px;
     outline: none;
-    border: 1px solid black;
+    border: none;
+    border: 1px solid;
 }
 
 #button-pesquisar{
