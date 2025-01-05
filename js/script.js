@@ -1,3 +1,11 @@
+var body = document.body
+var heade = document.querySelector("header")
+
+//Adaptação do tamanho do home inicial
+console.log(document.querySelector("#home-inicial").clientHeight)
+var homeInicial = document.querySelector("#home-inicial")
+
+
 //Adicionar uma animação na barra de pesquisa
 var barraDePesquisa = document.querySelector("#barra");
 var buttonBarra = document.querySelector("#button-pesquisar")
@@ -32,10 +40,6 @@ var novoTema = ""
 var direcaoTema = ""
 var inverterCor = ""
 var ativoTema = false
-
-var homeInicial = document.querySelector("#home-inicial")
-var body = document.body
-var heade = document.querySelector("header")
 
 function temaClaro(){
     var inverter0 = document.querySelectorAll(".inverter0")
