@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.cdnfonts.com/css/bubbleboddy-neue-trial" rel="stylesheet">
     <link rel="stylesheet" href="css/porte-moveis.css">
+    <!--Adição do AOS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <header>
@@ -46,5 +49,27 @@
     </section>
 
     <script src="js/script.js" defer></script>
+
+    <!--Animações ocorrem apenas quando o usuário rolar até o elemento, usando uma biblioteca:  AOS-->
+    <script>
+        AOS.init();
+    </script>
+
+    <div class="sobre" id="sobre-site" data-aos="fade-up">
+        <div class="conteudo">
+            <h2 id="titulo-sobre-site" data-aos="fade-up" data-aos-delay="100">SOBRE <br> O <br> SITE</h2>
+            <div class="caixa" data-aos="zoom-in" data-aos-delay="300"></div>
+            <p id="texto-sobre-site" data-aos="fade-left" data-aos-delay="500">
+                O FitoPédia é um site que tem a finalidade de ser utilizado como uma ferramenta de busca e aprendizado. Explorando o tema, a fitoterapia, que aborda o uso de medicamentos cuja constituição ativa são plantas e derivados vegetais para usos medicinais.
+            </p>
+        </div>
+        <div id="sobre-nos" class="conteudo">
+            <h2 id="titulo-sobre-nos" data-aos="fade-up" data-aos-delay="100">SOBRE <br> NÓS</h2>
+            <div class="caixa" data-aos="zoom-in" data-aos-delay="300"></div>
+            <p id="texto-sobre-nos" data-aos="fade-left" data-aos-delay="500">
+                Nossa equipe é formada pelas alunas do IFPB Campus Santa Luzia: Gabrielly Araújo, Iara Garcia e Nicole Feliciano; em parceria com a Dra. Professora Karla Monik, do Centro Universitário Unifacisa.
+            </p>
+        </div>
+    </div>
 </body>
 </html>
