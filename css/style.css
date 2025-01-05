@@ -452,46 +452,215 @@ header{
 }
 
 
-/*sobre*/
+/*novo*/
 
-.sobre {
-    display: flex;
-    flex-direction: column;
-    gap: 150px; /* Espaçamento entre as seções */
-    margin: 30% auto;
-    width: 90%;
-    max-width: 1200px;
+h2.red.center {
+    position: relative;
+    margin: 300px auto;
+    text-align: center;
+    padding: 30px;
+    font-size: 3em;
     color: #012200;
 }
 
-/* Organização de cada seção */
-.conteudo {
+.spacer-inn {
+    margin-top: -200px;
+}
+
+.pag-core-values .core-tab-sec {
+    display: block;
+    width: 100%;
+}
+
+.pag-core-values .core-tab-sec .core-tabNav{ 
+    text-align: center;
+}
+
+.pag-core-values .core-tab-sec .core-tabNav li {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%; 
+    margin: 0 1.5%;
+}
+
+.pag-core-values .core-tab-sec .core-tabNav li a{ 
+    display: block; 
+    width: 100%; 
+    text-align: center;
+}
+
+.pag-core-values .core-tab-sec .core-tabNav li figure { 
+    display: block;
+    width: 100%; 
+    position: relative;
+}
+
+.pag-core-values .core-tab-sec .core-tabNav li img {
+    display: block;
+    width: 70%; 
+    margin:0 auto;
+    transform: translateY(0px);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.pag-core-values .core-tab-sec .core-tabNav li img::after{
+    position: absolute;
+    width: 64%;
+    height: 12%; 
+    left: 0;
+    right: 0; 
+    bottom: 32px; 
+    margin: auto; 
+    z-index: 1; 
+    content: "";
+    box-shadow: 0 50px 24px rgba(0,0,0,0.1);
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.core-tabNav div {
+    display: inline-block;
+    vertical-align: top;
+    background-color: #fff; 
+    color: #646464; 
+    font-weight: 600; 
+    padding: 3px 8px; 
+    letter-spacing: 5px; 
+    position:relative; 
+    z-index: 2; 
+    margin-top: 35px; 
+    font-size:15px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.core-tabNav div::after{
+    width: 0;
+    height: 0; 
+    content: ''; 
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    bottom: -22px; 
+    margin: auto;
+    border: solid 12px transparent; 
+    opacity: 0; 
+    border-top-color: #e8f7ff;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; 
+}
+
+.core-tabNav div .active a{ 
+    background-color: #646464; 
+    color: #fff;
+}
+
+.core-tabNav div .active a::after { 
+    opacity: 1; 
+    border-top-color: #646464;
+}
+
+.core-tabNav div .active:hover a{
+    transform: translateY(-15px);
+}
+
+.core-tabCnt{
+    display: block;
+    padding: 70px;
+}
+
+.core-tabSec {
+    position: relative;
+    padding: 25px 80px;
+    background-color: white;
+}
+
+.core-tabSec::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 10px;
+    background: linear-gradient(to top, #012200, #3bed00);
+}
+
+.core-tabSec p { 
+    margin-bottom: 30px; 
+    margin-top: 30px; 
+    line-height: 30px;
+}
+
+ul.core-tabNav {
+  display: -webkit-inline-box;
+  text-align: center;margin: 0px auto;
+  position: relative;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.core-tab-sec {
+    position: relative;
+    text-align: center;
+    margin: 0px auto;
+    background: #eee;
+}
+
+.core-p {
+    color: #012200;
+}
+
+.core-tabNav {
+    list-style: none;
+    padding: 0;
     display: flex;
-    align-items: center; /* Alinha verticalmente os elementos */
-    gap: 20px; /* Espaçamento entre os elementos */
+    justify-content: space-around;
 }
 
-/* Estilo dos títulos */
-#titulo-sobre-site, #titulo-sobre-nos {
-    flex: 1; /* Ocupa 1 parte do espaço disponível */
-    text-align: left;
-    font-size: 4em;
-   /*color: #012200;*/
+.core-tabNav li {
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
 }
 
-/* Caixa central */
-.caixa {
-    flex: 0 0 5px; /* Largura fixa */
-    height: 220px;
-    background: linear-gradient(to bottom, #3bed00, #012200);
-    border-radius: 5px;
+.core-tabNav li:hover {
+    border-bottom: 3px solid #3bed00;
 }
 
-/* Estilo dos textos */
-#texto-sobre-site, #texto-sobre-nos {
-    flex: 2; /* Ocupa 2 partes do espaço disponível */
-    font-size: 1.2em;
-    line-height: 1.6;
-    text-align: justify;
-    color: #333;
+.core-p {
+    font-size: 18px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.core-p {
+    transition: opacity 0.5s ease-in-out;
+}
+#button-pesquisar img {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0; /* Começa invisível */
+    transform: scale(0.8); /* Começa levemente reduzida */
+}
+
+#button-pesquisar img.aparecer {
+    opacity: 1;
+    transform: scale(1); /* Volta ao tamanho normal */
 }
