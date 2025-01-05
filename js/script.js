@@ -41,34 +41,36 @@ var direcaoTema = ""
 var inverterCor = ""
 var ativoTema = false
 
-function temaClaro(){
-    var inverter0 = document.querySelectorAll(".inverter0")
-    var claroVerde1 = document.querySelectorAll(".claroVerde1")
-    var bordaPreta = document.querySelectorAll(".bordaPreta")
-    var corPreta = document.querySelectorAll(".preto")
+var inverterEscala = document.querySelectorAll(".inverterEscala")
+var verde1 = document.querySelectorAll(".verde1")
+var bordaPB = document.querySelectorAll(".bordaPB")
 
-    claroVerde1.forEach(elemento => {elemento.style.color = "#2b6200"});
-    bordaPreta.forEach(elemento => {elemento.style.borderColor = "#000000"})
-    inverter0.forEach(elemento => {elemento.style.filter = "invert(0%)"})
+var corBranca = document.querySelectorAll(".branco")
+var corPreta = document.querySelectorAll(".preto")
+
+var gradienteVerdeTop = document.querySelectorAll(".gradienteVerdeTop")
+var gradienteVerdeLado = document.querySelectorAll(".gradienteVerdeLado")
+
+function temaClaro(){
+    verde1.forEach(elemento => {elemento.style.color = "#2b6200"});
+    bordaPB.forEach(elemento => {elemento.style.borderColor = "#000000"})
+    inverterEscala.forEach(elemento => {elemento.style.filter = "invert(0%)"})
     corPreta.forEach(elemento => {elemento.style.color = "#000000"})
 
     body.style.backgroundColor = "#FFFFFF"
-    heade.style.backgroundImage = "linear-gradient(to left, #99ed00,#408602)"
+    gradienteVerdeTop.forEach(elemento => {elemento.style.backgroundImage = "linear-gradient(to bottom, #3bed00, #012200"})
+    gradienteVerdeLado.forEach(elemento => {elemento.style.backgroundImage = "linear-gradient(to right, #99ed00, #408602)"})
 }
 
 function temaEscuro(){
-    var inverter100 = document.querySelectorAll(".inverter100")
-    var escuroVerde1 = document.querySelectorAll(".escuroVerde1")
-    var bordaBranca = document.querySelectorAll(".bordaBranca")
-    var corBranca = document.querySelectorAll(".branco")
-
-    escuroVerde1.forEach(elemento => {elemento.style.color = "#85e838"});
-    bordaBranca.forEach(elemento => {elemento.style.borderColor = "#ffffff"})
-    inverter100.forEach(elemento => {elemento.style.filter = "invert(100%)"})
+    verde1.forEach(elemento => {elemento.style.color = "#85e838"});
+    bordaPB.forEach(elemento => {elemento.style.borderColor = "#ffffff"})
+    inverterEscala.forEach(elemento => {elemento.style.filter = "invert(100%)"})
     corBranca.forEach(elemento => {elemento.style.color = "#ffffff"})
 
     body.style.backgroundColor = "#272924" 
-    heade.style.backgroundImage = "linear-gradient(to right, #99ed00,#408602)"
+    gradienteVerdeTop.forEach(elemento => {elemento.style.backgroundImage = "linear-gradient(to top, #3bed00, #012200)"})
+    gradienteVerdeLado.forEach(elemento => {elemento.style.backgroundImage = "linear-gradient(to left, #99ed00, #408602)"})
 }
 
 function alterarTema(){

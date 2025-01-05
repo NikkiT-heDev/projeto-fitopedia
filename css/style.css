@@ -86,7 +86,7 @@ header{
     justify-content: center;
 }
 
-#barra{
+#barra, #barra:autofill {
     height: 15px;
     width: 400px;
     border: 0px;
@@ -96,12 +96,17 @@ header{
     transition: .5s;
 }
 
+#barra:autofill{
+    border-radius: 20px;
+} 
+
 #barra:focus{
     border-radius: 20px;
     outline: none;
     border: none;
     border: 1px solid;
 }
+
 
 #button-pesquisar{
     display: none;
@@ -471,7 +476,7 @@ header{
     flex: 1; /* Ocupa 1 parte do espaço disponível */
     text-align: left;
     font-size: 4em;
-    color: #012200;
+   /*color: #012200;*/
 }
 
 /* Caixa central */
