@@ -104,3 +104,48 @@ function alterarTema(){
     }
 }
 
+/*atualização*/
+
+(function(document, window, $){
+    $(document).ready(function(){
+      $('.core-tabNav li').each(function(e){
+        $(this).find('a').on('click', function(e){
+            e.preventDefault();
+          var paragraphID = $(this).attr('href'),
+              pragraph = $(paragraphID);
+              hideAll(function () {
+                  pragraph.fadeIn('slow');
+              console.log(pragraph);
+              });
+        });
+  });
+      
+  function hideAll(callback){
+      var count = 0;
+    $('.core-p').fadeOut(400, function () {
+        count++;
+        if (count ===3)
+       callback();
+    });
+    }
+  });
+  
+      $(window).scroll(function() {
+      $('#object').each(function(){
+      var imagePos = $(this).offset().top;
+  
+      var topOfWindow = $(window).scrollTop();
+        if (imagePos < topOfWindow+1000) {
+          $(this).addClass("fadeIn");
+        }
+      });
+    });
+  }(document, window, jQuery));
+
+  function mudarTexto(novoTexto, event) {
+    // Evita o comportamento padrão do link
+    event.preventDefault();
+    
+    // Altera o texto no parágrafo
+    document.getElementById('texto-principal').innerText = novoTexto;
+  }
