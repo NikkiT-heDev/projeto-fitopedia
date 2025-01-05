@@ -6,25 +6,3 @@
     #banner{ width: 100%; margin-top: 25px}
     #animacao-home{margin: 0;}
 }
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .conteudo {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #titulo-sobre-site, #titulo-sobre-nos {
-        text-align: center;
-        font-size: 2em;
-    }
-
-    #texto-sobre-site, #texto-sobre-nos {
-        font-size: 1em;
-    }
-
-    .caixa {
-        height: 150px;
-    }
-}
-
