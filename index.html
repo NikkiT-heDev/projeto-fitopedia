@@ -38,13 +38,7 @@
     <section id="home-inicial" class="verde1">
         <!--Aqui irá ficar a logo inicial e a barra de pesquisa-->
        
-        <div id="animacao-home">
-            <div id="triangulo1" class="tr"></div>
-            <div id="triangulo2" class="tr"></div>
-            <div id="triangulo3" class="tr"></div>
-        </div>
-
-        <div style="width: 60%;" id="banner" class="home">
+        <div style="width: 60%;" id="banner" class="home" data-aos="fade-right">
             <h1 id="banner-h1">FITOPÉDIA</h1>
             <p class="paragrafos">O site perfeito para explorar o poder das plantas através da Fitoterapia</p>
             <div id="barra-de-pesquisa" onmo>
@@ -54,10 +48,16 @@
                 </button>
             </div>
         </div>
-        <div id="imagem-banner" class="home">
+        <div id="imagem-banner" class="home" data-aos="fade-left">
             <img width="70%" src="imgs/notebook-modelo.png" alt="">
         </div>
     </section>
+
+    <div id="animacao-home" data-aos="fade-up">
+        <div id="triangulo1" class="tr"></div>
+        <div id="triangulo2" class="tr"></div>
+        <div id="triangulo3" class="tr"></div>
+    </div>
 
     <script src="js/script.js" defer></script>
 
@@ -65,29 +65,28 @@
     <!--novo-->
 
     <h2 class="red center" data-aos="fade-up" data-aos-delay="100">SAIBA MAIS SOBRE NÓS</h2>
-    <div class="spacer-inn"></div>
 
     <div class="core-tab-sec">
         <!-- Navegação das abas -->
-        <ul class="core-tabNav">
+        <ul class="core-tabNav branco preto" data-aos="fade-up">
             <li><a href="#" onclick="mudarTexto('O FitoPédia é um site que tem a finalidade de ser utilizado como uma ferramenta de busca e aprendizado. Explorando o tema, a fitoterapia, que aborda o uso de medicamentos cuja constituição ativa são plantas e derivados vegetais para usos medicinais.', event)">
-                <figure><img src="imgs/icons/sobre-icon.png" height="200" width="200" alt="sobre"></figure>
+                <figure><img src="imgs/icons/sobre-icon.png"alt="sobre"></figure>
                 <div>SOBRE</div></a>
             </li>
             <li><a href="#" onclick="mudarTexto('Nossa equipe é formada pelas alunas do IFPB Campus Santa Luzia: Gabrielly Araújo, Iara Garcia e Nicole Feliciano; em parceria com a Dra. Professora Karla Monik, do Centro Universitário Unifacisa.', event)">
-                <figure><img src="imgs/icons/equipe-icon.png" height="200" width="200" alt="equipe"></figure>
+                <figure><img src="imgs/icons/equipe-icon.png" alt="equipe"></figure>
                 <div>DESENVOLVEDORES</div></a>
             </li>
             <li><a href="#" onclick="mudarTexto('O esperado deste site é promover conhecimento sobre as plantas e mostrar que elas podem e são capazes de curar muitas coisas. Além disso, esperamos entregar um resultado simples, porém funcional e utilizando um bom uso de todo o conteúdo estudado durante o desenvolvimento da disciplina ao decorrer do ano.', event)">
-                <figure><img src="imgs/icons/mais-icon.png" height="200" width="200" alt="mais"></figure>
+                <figure><img src="imgs/icons/mais-icon.png" alt="mais"></figure>
                 <div>MAIS</div></a>
             </li>
         </ul>
     
         <!-- Texto Padrão -->
-        <div class="core-tabCnt">
+        <div class="core-tabCnt branco preto" >
             <div class="core-tabSec">
-                <p class="core-p" id="texto-principal">
+                <p class="core-p" id="texto-principal"  data-aos="fade-right">
                     Saiba todos os detalhes do nosso site clicando nos ícones acima. Explore e pesquise na nossa página!
                 </p>
             </div>

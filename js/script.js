@@ -57,7 +57,7 @@ function temaClaro(){
     inverterEscala.forEach(elemento => {elemento.style.filter = "invert(0%)"})
     corPreta.forEach(elemento => {elemento.style.color = "#000000"})
 
-    body.style.backgroundColor = "#FFFFFF"
+    body.style.backgroundColor = "#eee"
     gradienteVerdeTop.forEach(elemento => {elemento.style.backgroundImage = "linear-gradient(to bottom, #3bed00, #012200"})
     gradienteVerdeLado.forEach(elemento => {elemento.style.backgroundImage = "linear-gradient(to right, #99ed00, #408602)"})
 }
