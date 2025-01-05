@@ -112,6 +112,10 @@ header{
     display: none;
 }
 
+#banner, #imagem-banner{
+    transition: 1.5s;
+}
+
 #button-pesquisar img{
     opacity: 0;
     transition: opacity .5s ease;
@@ -122,14 +126,13 @@ header{
 }
 
 #animacao-home{
-    display: flex;
-    position: absolute;
+    display:flex; 
 
     z-index: -1;
-    height: 100%;
+    height: 25vh;
 
     align-items: end;
-    justify-content: start;
+    justify-content: center;
 
     width: 100%;
 }
@@ -137,7 +140,6 @@ header{
 #triangulo1{
     float: left;
     width: 100%;
-    height: 50%;
 
     shape-outside: polygon(
         0 0,
@@ -161,7 +163,6 @@ header{
     z-index: 2;
     float: left;
     width: 100%;
-    height: 30%;
 
     shape-outside: polygon(
         0 0,
@@ -186,7 +187,6 @@ header{
     z-index: 1;
     float: left;
     width: 100%;
-    height: 20%;
 
     shape-outside: polygon(
         0 0,
@@ -206,21 +206,6 @@ header{
     animation: tr3 3s linear 2s infinite;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @keyframes tr3 {
     0%{
@@ -447,57 +432,50 @@ header{
 }
 
 .tr{
+    width: 100%;
+    height: 25vh;
     position: absolute;
-    background-color: rgb(7, 89, 160);
 }
 
 
 /*novo*/
 
 h2.red.center {
-    position: relative;
-    margin: 300px auto;
     text-align: center;
     padding: 30px;
     font-size: 3em;
     color: #012200;
 }
 
-.spacer-inn {
-    margin-top: -200px;
-}
-
-.pag-core-values .core-tab-sec {
+.core-tab-sec {
     display: block;
     width: 100%;
 }
 
-.pag-core-values .core-tab-sec .core-tabNav{ 
+.core-tab-sec .core-tabNav{ 
     text-align: center;
 }
 
-.pag-core-values .core-tab-sec .core-tabNav li {
+.core-tab-sec .core-tabNav li {
     display: inline-block;
     vertical-align: top;
-    width: 30%; 
+    width: 25%;
+
+    align-items: center;
+    justify-items: center;
     margin: 0 1.5%;
 }
 
-.pag-core-values .core-tab-sec .core-tabNav li a{ 
+.core-tab-sec .core-tabNav li a{ 
     display: block; 
     width: 100%; 
     text-align: center;
 }
 
-.pag-core-values .core-tab-sec .core-tabNav li figure { 
-    display: block;
-    width: 100%; 
-    position: relative;
-}
 
-.pag-core-values .core-tab-sec .core-tabNav li img {
+.core-tab-sec .core-tabNav li img {
     display: block;
-    width: 70%; 
+    width: 80%; 
     margin:0 auto;
     transform: translateY(0px);
     -webkit-transition: all 0.4s ease-in-out;
@@ -529,7 +507,7 @@ h2.red.center {
 .core-tabNav div {
     display: inline-block;
     vertical-align: top;
-    background-color: #fff; 
+
     color: #646464; 
     font-weight: 600; 
     padding: 3px 8px; 
@@ -586,7 +564,7 @@ h2.red.center {
 .core-tabSec {
     position: relative;
     padding: 25px 80px;
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .core-tabSec::before {
@@ -617,7 +595,6 @@ ul.core-tabNav {
     position: relative;
     text-align: center;
     margin: 0px auto;
-    background: #eee;
 }
 
 .core-p {
@@ -653,14 +630,4 @@ ul.core-tabNav {
 }
 .core-p {
     transition: opacity 0.5s ease-in-out;
-}
-#button-pesquisar img {
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    opacity: 0; /* Começa invisível */
-    transform: scale(0.8); /* Começa levemente reduzida */
-}
-
-#button-pesquisar img.aparecer {
-    opacity: 1;
-    transform: scale(1); /* Volta ao tamanho normal */
 }
