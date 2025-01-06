@@ -639,4 +639,19 @@ ul.core-tabNav {
 }
 .core-p {
     transition: opacity 0.5s ease-in-out;
+<<<<<<< HEAD
 }
+#button-pesquisar img {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0; /* Começa invisível */
+    transform: scale(0.8); /* Começa levemente reduzida */
+}
+
+#button-pesquisar img.aparecer {
+    opacity: 1;
+    transform: scale(1); /* Volta ao tamanho normal */
+}
+
+=======
+}
+>>>>>>> af890d108fb86c2abfd4901a6ae0608b8eeff63a
