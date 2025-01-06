@@ -30,23 +30,32 @@ header{
     display: flex;
     align-items: center;
 
-    width: 70px;
+    width: 90px;
     height: 40px;
 
     border-radius: 20px;
-    border: 2px solid rgb(58, 21, 0);
-    background: rgb(216, 214, 219);
+    border: 1px solid rgb(255, 255, 255);
+
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+
+    background-color: rgba(10, 122, 0, 0);
 
     filter: brightness(50px);
     transition: .5s;
 }
 
 #tema-atual{
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     background-image: url(../imgs/icons/sol.png); 
-    background-size: 100% auto;
+
+    background-size: 75% auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     transition: .7s;
+
+    border-radius: 100%;
+    background-color: #fff;
 }
 
 #home-inicial{

@@ -83,13 +83,13 @@ function alterarTema(){
             direcaoTema= "right"
             novoTema = "lua"
             inverterCor = "100%"
-            divTemaAtual.style.marginLeft = "30px"
+            divTemaAtual.style.marginLeft = "45px"
             temaEscuro()
         }else{
             novoTema = "sol"
             direcaoTema= "left"
             inverterCor = "0%"
-            divTemaAtual.style.marginRight = "30px"
+            divTemaAtual.style.marginRight = "45px"
             temaClaro()
         }
         divTemaAtual.style.backgroundImage = `url(../imgs/icons/${novoTema}.png)`

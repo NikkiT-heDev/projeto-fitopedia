@@ -6,7 +6,13 @@ header{
     border-end-end-radius: 50px;
 }
 
+a{
+    text-decoration: none;
+    padding: 50px;
+}
+
 nav{
+
     text-align: right;
     font-family: 'Bubbleboddy Neue Trial', sans-serif;
     width: 100%;
