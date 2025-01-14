@@ -1,30 +1,97 @@
-var body = document.body
+var body = document.querySelector("body")
 var heade = document.querySelector("header")
+var elementos = document.body.children;
 
 //Adaptação do tamanho do home inicial
-console.log(document.querySelector("#home-inicial").clientHeight)
 var homeInicial = document.querySelector("#home-inicial")
-
 
 //Adicionar uma animação na barra de pesquisa
 var barraDePesquisa = document.querySelector("#barra");
-var buttonBarra = document.querySelector("#button-pesquisar")
-var imgLupa = buttonBarra.querySelectorAll("img")[0]
 
+var barras = document.querySelectorAll(".barra")
 var barraDiv = document.querySelector("#barra-de-pesquisa")
+var divPesquisas = document.querySelector("#pagina-de-pesquisa")
 
-barraDePesquisa.addEventListener("focus", animacaoBarraOn)
-barraDePesquisa.addEventListener("blur", animacaoBarraOff)
+barraDePesquisa.addEventListener("click", ativarNovaPaginaPesquisa)
+var buttonVoltarPagina = document.querySelector("#voltar-pagina")
 
-function animacaoBarraOn (){
-    buttonBarra.style.display = "block"
+buttonVoltarPagina.addEventListener("click",desativarNovaPaginaPesquisa)
+
+barras.forEach(barra => { // Ativa a animação para todas as tags com classe Barra 
+    inputAtual = barra.querySelector("input")
+
+    inputAtual.addEventListener("focus", function() {
+        animacaoBarraOn(barra.querySelector("button"));
+
+    }); 
+    inputAtual.addEventListener("blur", function() {
+        animacaoBarraOff(barra.querySelector("button"))
+    }) 
+})
+
+var barraDePesquisaPlantas = document.querySelector("#barra-de-pesquisa-plantas")
+var displaySalvos = []
+
+function ativarNovaPaginaPesquisa(){ //Irá ocutar todos os elementos. Com exceção da navbar e nova pagina
+
+    Array.from(elementos).forEach(elemento => {
+        if(elemento.id !== divPesquisas.id && elemento.tagName !== heade.tagName && elemento.tagName.toLowerCase() !== "script"){
+            displaySalvos.push(window.getComputedStyle(elemento).display)
+            elemento.style.display = "none"
+        }
+    })   
+
+    setTimeout(function (){
+        divPesquisas.style.display = "block"
+    }, 1500)
+
+    transicaoDeTelas()
+}
+
+var transicaoAtiva = false
+
+function transicaoDeTelas(){
+    if (!transicaoAtiva){
+        transicaoAtiva = true
+        var divTransicao = document.querySelector("#transicao")
+        divTransicao.style.display = "block"
+        divTransicao.style.animation = "bodyEscurecer 3s"
+
+        setTimeout(function(){
+            divTransicao.style.display = "none"
+            transicaoAtiva = false
+        },3000)
+    }
+}
+
+function desativarNovaPaginaPesquisa(){
+    transicaoDeTelas()
+
+    setTimeout(function(){
+        Array.from(elementos).forEach((elemento , i) => {
+            if(elemento.id !== divPesquisas.id && elemento.tagName !== heade.tagName){
+                elemento.style.display = displaySalvos[i]
+            }
+            divPesquisas.style.display = "none"
+        })
+    },1500)
+}
+
+function animacaoBarraOn (botaoAtual){
+    console.log(123)
+    var imgLupa = botaoAtual.querySelector("img")
+    var botaoAtual = document.querySelector("#"+botaoAtual.id)
+
+    botaoAtual.style.display = "block"
     imgLupa.style.opacity = 1;
 }
 
-function animacaoBarraOff (){
+function animacaoBarraOff (botaoAtual){
+    var botaoAtual = document.querySelector("#"+botaoAtual.id)
+    var imgLupa = botaoAtual.querySelectorAll("img")[0]
     imgLupa.style.opacity = 0;
     setTimeout(function (){
-        buttonBarra.style.display = "none"
+        botaoAtual.style.display = "none"
     },150)
 }
 
@@ -104,7 +171,7 @@ function alterarTema(){
     }
 }
 
-/*atualização*/
+/*atualização
 
 (function(document, window, $){
     $(document).ready(function(){
@@ -148,4 +215,4 @@ function alterarTema(){
     
     // Altera o texto no parágrafo
     document.getElementById('texto-principal').innerText = novoTexto;
-  }
+  }*/

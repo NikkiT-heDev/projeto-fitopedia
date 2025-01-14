@@ -5,6 +5,13 @@ body{
     transition: 0.5s;
 }
 
+@keyframes bodyEscurecer {
+    0%{background-color: #00000000;}
+    25%{background-color: #000000;}
+    75%{background-color: #000000;}
+    100%{background-color: #00000000;}
+}
+
 header{
     position: sticky;
     top: 0;
@@ -30,14 +37,13 @@ header{
     display: flex;
     align-items: center;
 
-    width: 90px;
-    height: 40px;
+    width: 80px;
+    height: 35px;
 
     border-radius: 20px;
-    border: 1px solid rgb(255, 255, 255);
+    border: 0px solid rgb(255, 255, 255);
 
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
-
+    background-image: linear-gradient(to left, rgb(255, 229, 182), rgb(255, 243, 220));
     background-color: rgba(10, 122, 0, 0);
 
     filter: brightness(50px);
@@ -45,8 +51,8 @@ header{
 }
 
 #tema-atual{
-    width: 30px;
-    height: 30px;
+    width: 23px;
+    height: 23px;
     background-image: url(../imgs/icons/sol.png); 
 
     background-size: 75% auto;
@@ -55,7 +61,6 @@ header{
     transition: .7s;
 
     border-radius: 100%;
-    background-color: #fff;
 }
 
 #home-inicial{
@@ -75,10 +80,11 @@ header{
     font-size: 16vh;
 }
 
-#button-pesquisar{
+.barraBotao{
     width: 35px;
     border: none;
     background: none;
+    display: none;
 }
 
 #imagem-banner{
@@ -88,14 +94,17 @@ header{
     justify-content: center;
 }
 
-#barra-de-pesquisa{
-    margin-top: 20px;
+.barra{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#barra, #barra:autofill {
+#barra-de-pesquisa{
+    margin-top: 20px;
+}
+
+.barraInput, .barraInput:autofill {
     height: 15px;
     width: 400px;
     border: 0px;
@@ -105,32 +114,27 @@ header{
     transition: .5s;
 }
 
-#barra:autofill{
+.barraInput:autofill{
     border-radius: 20px;
 } 
 
-#barra:focus{
+.barraInput:focus{
     border-radius: 20px;
     outline: none;
     border: none;
     border: 1px solid;
 }
 
-
-#button-pesquisar{
-    display: none;
-}
-
 #banner, #imagem-banner{
     transition: 1.5s;
 }
 
-#button-pesquisar img{
+.barraBotao  img{
     opacity: 0;
     transition: opacity .5s ease;
 }
 
-#button-pesquisar img:hover{
+.barraBotao  img:hover{
     cursor: pointer;
 }
 
@@ -639,19 +643,5 @@ ul.core-tabNav {
 }
 .core-p {
     transition: opacity 0.5s ease-in-out;
-<<<<<<< HEAD
-}
-#button-pesquisar img {
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    opacity: 0; /* Começa invisível */
-    transform: scale(0.8); /* Começa levemente reduzida */
 }
 
-#button-pesquisar img.aparecer {
-    opacity: 1;
-    transform: scale(1); /* Volta ao tamanho normal */
-}
-
-=======
-}
->>>>>>> af890d108fb86c2abfd4901a6ae0608b8eeff63a

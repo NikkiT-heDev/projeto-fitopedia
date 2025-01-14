@@ -9,19 +9,17 @@
     <link rel="stylesheet" href="css/porte-moveis.css">
     <!--Adição do AOS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 
     <!--Font Awesome CDN-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/nova-pagina.css">
 </head>
 <body>
 
     <!--Animações ocorrem apenas quando o usuário rolar até o elemento, usando uma biblioteca:  AOS-->
-    <script>
-        AOS.init();
-    </script>
+    
 
     <header class="gradienteVerdeLado">
         <div id="faixa-navbar">    
@@ -41,9 +39,9 @@
         <div style="width: 60%;" id="banner" class="home" data-aos="fade-right">
             <h1 id="banner-h1">FITOPÉDIA</h1>
             <p class="paragrafos">O site perfeito para explorar o poder das plantas através da Fitoterapia</p>
-            <div id="barra-de-pesquisa" onmo>
-                <input type="text" name="Pesquisar" id="barra" class="barra bordaPB branco preto">
-                <button id="button-pesquisar" class="barra">
+            <div id="barra-de-pesquisa" class="barra" onmo>
+                <input type="text" name="Pesquisar" id="barra" class="barraInput bordaPB branco preto">
+                <button id="button-pesquisar" class="barraBotao">
                     <img src="imgs/icons/lupa.png" width="100%" alt="Pesquisar Botão" class="inverterEscala">
                 </button>
             </div>
@@ -58,9 +56,6 @@
         <div id="triangulo2" class="tr"></div>
         <div id="triangulo3" class="tr"></div>
     </div>
-
-    <script src="js/script.js" defer></script>
-
 
     <!--novo-->
 
@@ -93,7 +88,33 @@
         </div>
     </div>
 
-    </div> 
-    </div> 
 
+    <div id="transicao" hidden></div>
+
+    <!--Área de Pesquisa-->
+
+    <div id="pagina-de-pesquisa" hidden>
+        <div class="parte-inicial">
+            <button id = "voltar-pagina" value="voltar">< Voltar</button>
+
+            <div id="barra-de-pesquisa-plantas" class="barra">
+                <input type="text" name="Pesquisar" id="barraPlantas" class="barraInput bordaPB branco preto">
+                <button id="button-pesquisar-plantas" class="barraBotao">
+                    <img src="imgs/icons/lupa.png" width="100%" alt="Pesquisar Botão" class="inverterEscala">
+                </button>
+            </div>
+        </div>
+        <div class=" pesquisas-recentes"></div>
+        <div class=""></div>
+    </div>
+
+
+    <script type="module" src="js/dadosPlanilha.js"></script>
+    <script src="js/script.js" defer></script>
+    <script type="module" src="js/busca.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
     
