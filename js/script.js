@@ -33,7 +33,7 @@ var barraDePesquisaPlantas = document.querySelector("#barra-de-pesquisa-plantas"
 var displaySalvos = []
 
 function ativarNovaPaginaPesquisa(){ //Irá ocutar todos os elementos. Com exceção da navbar e nova pagina
-
+/*
     Array.from(elementos).forEach(elemento => {
         if(elemento.id !== divPesquisas.id && elemento.tagName !== heade.tagName && elemento.tagName.toLowerCase() !== "script"){
             displaySalvos.push(window.getComputedStyle(elemento).display)
@@ -45,7 +45,7 @@ function ativarNovaPaginaPesquisa(){ //Irá ocutar todos os elementos. Com exce�
         divPesquisas.style.display = "block"
     }, 1500)
 
-    transicaoDeTelas()
+    transicaoDeTelas()*/
 }
 
 var transicaoAtiva = false
@@ -65,7 +65,7 @@ function transicaoDeTelas(){
 }
 
 function desativarNovaPaginaPesquisa(){
-    transicaoDeTelas()
+    /*transicaoDeTelas()
 
     setTimeout(function(){
         Array.from(elementos).forEach((elemento , i) => {
@@ -74,7 +74,7 @@ function desativarNovaPaginaPesquisa(){
             }
             divPesquisas.style.display = "none"
         })
-    },1500)
+    },1500)*/
 }
 
 function animacaoBarraOn (botaoAtual){
