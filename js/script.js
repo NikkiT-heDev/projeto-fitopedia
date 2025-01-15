@@ -78,7 +78,7 @@ function desativarNovaPaginaPesquisa(){
 }
 
 function teste(){
-    
+
 }
 
 function animacaoBarraOn (botaoAtual){
@@ -175,7 +175,7 @@ function alterarTema(){
     }
 }
 
-/*atualização
+//atualização
 
 (function(document, window, $){
     $(document).ready(function(){
@@ -219,4 +219,4 @@ function alterarTema(){
     
     // Altera o texto no parágrafo
     document.getElementById('texto-principal').innerText = novoTexto;
-  }*/
+  }
