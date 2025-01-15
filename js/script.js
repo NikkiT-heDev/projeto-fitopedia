@@ -65,7 +65,7 @@ function transicaoDeTelas(){
 }
 
 function desativarNovaPaginaPesquisa(){
-    /*transicaoDeTelas()
+    transicaoDeTelas()
 
     setTimeout(function(){
         Array.from(elementos).forEach((elemento , i) => {
@@ -74,7 +74,11 @@ function desativarNovaPaginaPesquisa(){
             }
             divPesquisas.style.display = "none"
         })
-    },1500)*/
+    },1500)
+}
+
+function teste(){
+    
 }
 
 function animacaoBarraOn (botaoAtual){
