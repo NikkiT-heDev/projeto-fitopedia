@@ -671,3 +671,107 @@ ul.core-tabNav {
     transition: opacity 0.5s ease-in-out;
 }
 
+#desenvolvedores .titulo-dev {
+    font-size: 2em;
+    padding-top: 10%;
+    color: #012200;
+    text-align: center;
+}
+
+.wrapper .caixa {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.caixa .card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    overflow: hidden;
+    box-shadow: 0px 30px 30px #020008, inset 0 0 0 1000px #020008;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .dev-img, .dev-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.card .conteudo {
+    position: absolute;
+    bottom: -160px;
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    transition: bottom 0.5s;
+    transition-delay: 0.65s;
+}
+
+.card:hover .conteudo {
+    bottom: 0;
+    transition-delay: 0s;
+}
+
+.conteudo .caixa-conteudo h3 {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 20px 0px 25px;
+    line-height: 1.1em;
+    transition: 0.5s;
+    transition-delay: 0.6s;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.card:hover .conteudo .caixa-conteudo h3 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.conteudo .caixa-conteudo h3 span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: initial;
+    color: var(--white);
+}
+
+.conteudo .social {
+    position: relative;
+    bottom: 10px;
+    display: flex;
+}
+
+.conteudo .social li {
+    list-style: none;
+    margin: 0 30px 0 -10px;
+    transform: translateY(40px);
+    transition: 0.5s;
+    opacity: 0;
+    transition-delay: calc(0.2s * var(--i));
+}
+
+.card:hover .conteudo .social li {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.conteudo .social li a {
+    font-size: 24px;
+}
