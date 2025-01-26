@@ -1,25 +1,258 @@
 import carregarPlantas from '../js/dadosPlanilha.js'
-/*
+
 const barraDePesquisa = document.querySelector("#barra-de-pesquisa")
-const barra = document.querySelector("#barra")
+const barra = document.querySelector("#barraPlantas")
 const lupa = barraDePesquisa.querySelector("button")
 
 console.log(barra)
 
 document.addEventListener("DOMContentLoaded", function () {
     carregarPlantas()
-    const plantas = JSON.parse(localStorage.getItem('plantas'))
-    gerarPlantas(plantas)
 })
 
-barra.addEventListener("keydown", function(valor){
+barra.addEventListener("keyup", function(valor){
     console.log(barra.value)
+    const plantas = JSON.parse(localStorage.getItem('plantas'))
+    procurarPlantas(plantas,barra.value)
 })
 
-function gerarPlantas(plantas){
-    console.log(plantas[0])
+function procurarPlantas(plantas,valor){ //Procura na planilha o valor correspondente ao digitado
+    var colunaCards = criarDiv()
+
+    if (valor != "" && valor != " "){
+        plantas.forEach(planta => {
+            var nomesPopulares = planta.nomes_populares  || []
+            var nomesCientificos = planta.nomes_cientifico || []
+
+            console.log(valor)
+            if (nomesPopulares.toLowerCase().includes(valor.toLowerCase()) || nomesCientificos.toLowerCase().includes(valor.toLowerCase())){
+                
+                criarCards(planta,colunaCards)
+            }
+        })
+    }else{
+        apagarDiv()
+    }
 }
 
-function procurarPlantas(valor){
+const SRC_PLANTA_PADRAO = "../imgs/icons/planta.png" 
+const SRC_REMEDIO_PADRAO = "../imgs/icons/capsula.png" 
 
-}*/
+function cardExtendido(planta,img, nomeP, nomeC){ //Replica todas os elementos para padronizar os cards
+    var div1 = document.createElement("div")
+    div1.classList.add("card-planta-extendido")
+
+    var div2 = document.createElement("div")
+    div2.classList.add("informacoes-card-extendido")
+
+    var imagem = document.createElement("img")
+    imagem.classList.add("img-card-extendido")
+    imagem.alt = "Imagem da Planta"
+    imagem.src = img
+
+    var div3 = document.createElement("div")
+
+    var h1 = document.createElement("h1")
+    h1.innerText = nomeP
+    h1.classList.add("nome-planta")
+    h1.classList.add("nome-card")
+
+    var h2 = document.createElement("h2")
+    h2.innerText = "Informações"
+    h2.classList.add("button-card-extendido")
+    h2.classList.add("botao-card")
+
+    var p = document.createElement("p")
+    p.classList.add("nome-cientifico")
+    p.classList.add("nome-cientifico-card")
+    p.innerText = nomeC
+
+    div1.appendChild(div2)
+    div1.appendChild(h2)
+
+    div2.appendChild(imagem)
+    div2.appendChild(div3)
+
+    div3.appendChild(h1)
+    div3.appendChild(p)
+
+    h2.addEventListener("click",function(){
+        exibirInformacoes(planta)
+    })
+    
+    return div1
+}
+
+const PARTE_INICIAL = document.querySelectorAll(".parte-inicial")[0]
+var plantaAtual
+
+function apagarDiv(){ //Exclui a coluna de cards atual
+    var colunaCards = document.querySelector("#coluna-de-cards")
+    if (colunaCards){
+        colunaCards.parentNode.removeChild(colunaCards)
+    }
+}
+
+function criarDiv(){ //Recria a coluna de cards
+    apagarDiv()
+
+    var colunaCards = document.createElement("div")
+    colunaCards.id = "coluna-de-cards"
+    console.log(colunaCards)
+
+    return colunaCards
+}
+
+function criarCards(planta,colunaCards){//Informa a função de criação dos elementos do card suas informações
+    var nomesPopulares = planta.nomes_populares
+    var nomesCientificos = planta.nomes_cientifico
+    var imgPlanta = planta.imagem_demonstracao1 || SRC_PLANTA_PADRAO
+    
+    const cardPlantaExt = cardExtendido(planta,imgPlanta,nomesPopulares,nomesCientificos)
+    colunaCards.appendChild(cardPlantaExt)
+    PARTE_INICIAL.appendChild(colunaCards)
+}
+
+function informacoesGerais(nomeP,img1,localizacao,img2,nomeC){
+    var quadradoRemedio = document.querySelectorAll(".informacoes-da-planta")[0]
+
+    var nomePlanta = document.querySelector("#nome-planta")
+    nomePlanta.innerText = nomeP
+
+    var nomeCientifico = document.querySelector("#nomecientifico")
+    nomeCientifico.innerText = nomeC
+
+    var imgsPlanta = quadradoRemedio.querySelectorAll(".imgs-planta")
+    imgsPlanta[0].src = img1
+    imgsPlanta[1].src = localizacao
+    imgsPlanta[2].src = img2
+
+    return quadradoRemedio
+}
+
+//Configura o Div do Remedio de Acordo com a planta selecionada
+function preparacoesFarmaceuticas(nomeR,laboratorio,indicacao,posologia,descarte,contraIndicacoes,imgR){
+    var quadradoRemedio = document.querySelectorAll(".quadrado-informativo")[0]
+
+    var nomeRemedio = document.querySelector("#nome-remedio")
+    nomeRemedio.innerText = nomeR
+
+    var imgRemedio = document.querySelectorAll(".img-capsulas")[0]
+    imgRemedio = imgRemedio.querySelectorAll("img")[0]
+
+    imgRemedio.src = imgR
+
+    var textoTopicos = quadradoRemedio.querySelectorAll(".texto-remedios")
+    textoTopicos[0].innerText = laboratorio//laboratorio	
+    textoTopicos[1].innerText = indicacao//indicacao
+    textoTopicos[2].innerText = posologia//posologia
+    textoTopicos[3].innerText = descarte//descarte	
+    textoTopicos[4].innerText = contraIndicacoes//contra_indicacoes
+
+    return quadradoRemedio
+}
+
+function indicacoesExtemporaneas(parte_usada,indicacoes_extemporaneas,modo_de_preparo,modo_de_uso,contra_indicacoes_extemporaneas){
+    var quadradoCha = document.querySelectorAll(".quadrado-informativo")[1]
+    var textoTopicos = quadradoCha.querySelectorAll(".texto-remedios")
+    
+    textoTopicos[0].innerText = parte_usada	
+    textoTopicos[1].innerText = indicacoes_extemporaneas	
+    textoTopicos[2].innerText = modo_de_preparo	
+    textoTopicos[3].innerText = modo_de_uso	
+    textoTopicos[4].innerText = contra_indicacoes_extemporaneas	
+
+    return quadradoCha
+}
+
+//Organiza as informações da planilha para o Div
+function criarPainelInformativo(planta){
+    var nomeRemedio = planta.remedio
+    var nomesPopulares = planta.nomes_populares
+    var nomesCientificos = planta.nomes_cientifico
+
+    var imgPlanta1 = planta.imagem_demonstracao1 || SRC_PLANTA_PADRAO
+    var imgPlanta2 = planta.imagem_demonstracao2 || SRC_PLANTA_PADRAO
+    var imgRemedio = planta.img_remedio_demonstracao || SRC_REMEDIO_PADRAO
+
+    var localizacao = planta.localizacao || ""
+    var laboratorio = planta.laboratorio
+    var indicacao = planta.indicacao
+    var posologia = planta.posologia
+    var descarte = planta.descarte
+    var contraIndicacoes = planta.contra_indicacoes
+
+    var parteUsada = planta.parte_usada	
+    var indicacoesExtemporaneasTexto = planta.indicacoes_extemporaneas	
+    var modoDePreparo = planta.modo_de_preparo	
+    var modoDeUso	= planta.modo_de_uso	
+    var contraIndicacoesExtemporaneas = planta.contra_indicacoes_extemporaneas
+
+    var informacoesGeraisDiv = informacoesGerais(nomesPopulares,imgPlanta1,localizacao,imgPlanta2,nomesCientificos)
+    informacoesGeraisDiv.style.display = "block"
+
+    var quadradoRemedio = preparacoesFarmaceuticas(nomeRemedio,laboratorio,indicacao,posologia,descarte,contraIndicacoes,imgRemedio)
+    var quadradoCha = indicacoesExtemporaneas(parteUsada,indicacoesExtemporaneasTexto,modoDePreparo,modoDeUso,contraIndicacoesExtemporaneas)
+    
+    quadradoRemedio.style.display = "none"
+    quadradoCha.style.display = "flex"
+    informacoesGeraisDiv.style.display = "block"
+    //<div class="div-informacoes-da-planta">
+}
+
+var remedioButton = document.querySelector("#especialidades-button")
+var chaButton = document.querySelector("#preparacoes-button")
+var quadradoInformativos = document.querySelectorAll(".quadrado-informativo")
+
+remedioButton.addEventListener("click",function(){
+    quadradoInformativos[1].style.display = "none"
+    quadradoInformativos[0].style.display = "flex"
+})
+
+chaButton.addEventListener("click",function(){
+    quadradoInformativos[0].style.display = "none"
+    quadradoInformativos[1].style.display = "flex"
+})
+
+function exibirInformacoes(planta){
+    var elementosBody = document.body.children
+    body.style.backgroundColor = "rgb(23, 18, 18)"
+
+    for (let i = 0; i < elementosBody.length; i++) {
+        var elemento = elementosBody[i]
+        elemento.style.display = "none"
+    }
+
+    plantaAtual = planta
+    criarPainelInformativo(planta)
+}
+
+function ocultarInformacoes(){
+    var elementosBody = document.body.children
+    body.style.backgroundColor = "#e4e4e4"
+
+    var divInformacoesGerais = document.querySelectorAll(".informacoes-da-planta")[0]
+
+    for (let i = 0; i < elementosBody.length; i++) {
+        var elemento = elementosBody[i]
+        console.log(elemento.tagName === document.createElement("script").tagName)
+        if (!(elemento.tagName === document.createElement("script").tagName)){
+            if(elemento.className === "parte-inicial"){
+                elemento.style.display = "flex"
+            }else{
+                elemento.style.display = "block"
+            }
+            
+        }
+    }
+
+    divInformacoesGerais.style.display = 'none'
+    barra.value = ""
+    apagarDiv()
+}
+
+var voltarButton = document.querySelector("#voltar-pagina")
+
+voltarButton.addEventListener('click',function(){
+    ocultarInformacoes()
+})

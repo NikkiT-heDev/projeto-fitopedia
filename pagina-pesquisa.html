@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitopédia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.cdnfonts.com/css/bubbleboddy-neue-trial" rel="stylesheet">
+    <link rel="stylesheet" href="css/porte-moveis.css">
+    <!--Adição do AOS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/nova-pagina.css">
+    <link href="https://fonts.cdnfonts.com/css/cabo-rounded" rel="stylesheet">
+</head>
+<body>
+    <header class="gradienteVerdeLado">
+        <nav class="navbar">
+            <img id = "logo-navbar" src="imgs/fitopedia-logo-branca.png" alt="Logo" class="inverterEscala">
+            
+            <div>
+                <a href="index.html" id="pesquisar-navbar">
+                    <h2>Home</h2>
+                    <img id="img-navbar" src="imgs/icons/casa.png" alt="">               
+                </a>
+                <button id="tema-do-site" onclick="alterarTema(this)" class="jtfc-right">
+                    <div id="tema-atual"></div>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="parte-inicial">
+        <div id="barra-de-pesquisa" class="barra"   data-aos="fade-bottom">
+            <input type="text" name="Pesquisar" id="barraPlantas" class="barraInput bordaPB branco preto">
+            <button id="button-pesquisar" class="barraBotao">
+                <img src="imgs/icons/lupa.png" width="100%" alt="Pesquisar Botão" class="inverterEscala">
+            </button>
+        </div>
+
+        <div id="coluna-de-cards"></div>
+    </div>
+
+    <div class="grade-cards">
+        <div class="categoria-planta" data-aos="fade-up">
+            <h1>Pesquisas Recentes</h1>
+            <div class="pesquisas-recentes div-categoria-planta">
+                <button class="planta-anterior"><</button>
+                <div class="fila-card">
+                    <div class="card-planta" style="margin-top: 29px;">
+                        <div class="informacoes-card">
+                            <img src="https://static.wixstatic.com/media/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg/v1/fill/w_696,h_480,al_c,lg_1,q_80/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg" class="img-card" alt="Imagem da Planta">
+                            <div>
+                                <h1 class="nome-planta nome-card">Boldo</h1>
+                                <p class="nome-cientifico nome-cientifico-card">Pelmus boldus</p>
+                            </div>
+                        </div>
+                        <h2 class="button-card">Informações</h2>
+                    </div>
+                    <div class="card-planta">
+                        <div class="informacoes-card">
+                            <img src="https://static.wixstatic.com/media/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg/v1/fill/w_696,h_480,al_c,lg_1,q_80/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg" class="img-card" alt="Imagem da Planta">
+                            <div>
+                                <h1 class="nome-planta nome-card">Boldo</h1>
+                                <p class="nome-cientifico nome-cientifico-card">Pelmus boldus</p>
+                            </div>
+                        </div>
+                        <h2 class="button-card">Informações</h2>
+                    </div>
+                    <div class="card-planta">
+                        <div class="informacoes-card">
+                            <img src="https://static.wixstatic.com/media/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg/v1/fill/w_696,h_480,al_c,lg_1,q_80/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg" class="img-card" alt="Imagem da Planta">
+                            <div>
+                                <h1 class="nome-planta nome-card">Boldo</h1>
+                                <p class="nome-cientifico nome-cientifico-card">Pelmus boldus</p>
+                            </div>
+                        </div>
+                        <h2 class="button-card">Informações</h2>
+                    </div>
+                    <div class="card-planta">
+                        <div class="informacoes-card">
+                            <img src="https://static.wixstatic.com/media/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg/v1/fill/w_696,h_480,al_c,lg_1,q_80/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg" class="img-card" alt="Imagem da Planta">
+                            <div>
+                                <h1 class="nome-planta nome-card">Boldo</h1>
+                                <p class="nome-cientifico nome-cientifico-card">Pelmus boldus</p>
+                            </div>
+                        </div>
+                        <h2 class="button-card">Informações</h2>
+                    </div>
+                    <div class="card-planta">
+                        <div class="informacoes-card">
+                            <img src="https://static.wixstatic.com/media/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg/v1/fill/w_696,h_480,al_c,lg_1,q_80/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg" class="img-card" alt="Imagem da Planta">
+                            <div>
+                                <h1 class="nome-planta nome-card">Boldo</h1>
+                                <p class="nome-cientifico nome-cientifico-card">Pelmus boldus</p>
+                            </div>
+                        </div>
+                        <h2 class="button-card">Informações</h2>
+                    </div><div class="card-planta">
+                        <div class="informacoes-card">
+                            <img src="https://static.wixstatic.com/media/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg/v1/fill/w_696,h_480,al_c,lg_1,q_80/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg" class="img-card" alt="Imagem da Planta">
+                            <div>
+                                <h1 class="nome-planta nome-card">Boldo</h1>
+                                <p class="nome-cientifico nome-cientifico-card">Pelmus boldus</p>
+                            </div>
+                        </div>
+                        <h2 class="button-card">Informações</h2>
+                    </div><div class="card-planta">
+                        <div class="informacoes-card">
+                            <img src="https://static.wixstatic.com/media/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg/v1/fill/w_696,h_480,al_c,lg_1,q_80/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg" class="img-card" alt="Imagem da Planta">
+                            <div>
+                                <h1 class="nome-planta nome-card">Boldo</h1>
+                                <p class="nome-cientifico nome-cientifico-card">Pelmus boldus</p>
+                            </div>
+                        </div>
+                        <h2 class="button-card">Informações</h2>
+                    </div>
+                </div>
+                <button class="planta-proxima">></button>
+            </div>
+        </div>
+
+        <div class="categoria-planta" data-aos="fade-up">
+            <h1>Favoritos</h1>
+            <div class="favoritos div-categoria-planta">
+                <button class="planta-anterior"><</button>
+                <div class="fila-card">
+                    <div class="card-planta">
+                        <div class="informacoes-card">
+                            <img src="https://static.wixstatic.com/media/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg/v1/fill/w_696,h_480,al_c,lg_1,q_80/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg" class="img-card" alt="Imagem da Planta">
+                            <div>
+                                <h1 class="nome-planta nome-card">Boldo</h1>
+                                <p class="nome-cientifico nome-cientifico-card">Pelmus boldus</p>
+                            </div>
+                        </div>
+                        <h2 class="button-card">Informações</h2>
+                    </div>
+                    <div class="card-planta">
+                        <div class="informacoes-card">
+                            <img src="https://static.wixstatic.com/media/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg/v1/fill/w_696,h_480,al_c,lg_1,q_80/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg" class="img-card" alt="Imagem da Planta">
+                            <div>
+                                <h1 class="nome-planta nome-card">Boldo</h1>
+                                <p class="nome-cientifico nome-cientifico-card">Pelmus boldus</p>
+                            </div>
+                        </div>
+                        <h2 class="button-card">Informações</h2>
+                    </div>
+                    <div class="card-planta">
+                        <div class="informacoes-card">
+                            <img src="https://static.wixstatic.com/media/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg/v1/fill/w_696,h_480,al_c,lg_1,q_80/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg" class="img-card" alt="Imagem da Planta">
+                            <div>
+                                <h1 class="nome-planta nome-card">Boldo</h1>
+                                <p class="nome-cientifico nome-cientifico-card">Pelmus boldus</p>
+                            </div>
+                        </div>
+                        <h2 class="button-card">Informações</h2>
+                    </div>
+                </div>
+                <button class="planta-proxima">></button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="informacoes-da-planta" hidden>
+        <div class="header-div">
+            <div class="botoes-planta">
+                <button class="botaonav" id="especialidades-button">Especialidades Farmacêuticas</button>
+                <hr>     
+                <button class="botaonav" id="preparacoes-button">Preparações Extemporâneas</button> 
+            </div>
+            <button id="voltar-pagina" type="button" value="X">X</button>            
+        </div>
+
+        <h1 id="nome-planta">Nome Popular</h1>
+
+        <div class="quadrado-fotos-planta"> 
+            <div class="fotos-planta">
+                <img class="imgs-planta" src="" alt="imagem 1 da planta">
+                <iframe class="imgs-planta" src=""
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <img class="imgs-planta" src="" alt="imagem 2 da planta">
+            </div> 
+            <h2 id="nomecientifico">Nome Cientifico</h2>
+        </div>
+
+        <div class="quadrado-informativo" data-aos="fade-up">
+            <h1 id="nome-remedio">Nome do Remédio</h1>
+            <h2 class="preparacao">Preparações Farmacêuticas</h2>
+            <div class="img-capsulas">
+                <img src= ../imgs/icons/capsula.png alt="Cápsula de Remédio">
+            </div>
+
+            <div class="informacores-farmaceuticas">
+                <div class="informacao-farmaceutica">
+                    <div class="laboratorio">
+                        <h4 class="titulo-remedios">Laboratório</h4>
+                        <p class="texto-remedios"></p>
+                    </div>
+                    <div class="indicacao">
+                        <h4 class="titulo-remedios">Indicação</h4>
+                        <p class="texto-remedios"></p>
+                    </div>
+                    <div class="posologia">
+                        <h4 class="titulo-remedios">Posologia</h4>
+                        <p class="texto-remedios"></p>
+                    </div>
+                    <div class="descarte">
+                        <h4 class="titulo-remedios">Descarte</h4>
+                        <p class="texto-remedios"></p>
+                    </div>
+                </div>
+
+                <hr class="linha-vertical">
+
+                <div class="informacao-farmaceutica">
+                    <div class="contra-indicacoes">
+                        <h4 class="titulo-remedios">Contra Indicações</h4>
+                        <p class="texto-remedios"></p>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div class="quadrado-informativo">
+            <h1 id="nome-remedio">Preparação para Uso Imediato</h1>
+            <h2 class="preparacao">Preparações Extemporâneas</h2>
+            <div class="img-capsulas">
+                <img src= "imgs/icons/xicara.png" alt="xicara de chá">
+            </div>
+
+        <div class="informacores-farmaceuticas"  data-aos="fade-up">
+            <div class="informacao-farmaceutica">
+                <div class="parte-usada">
+                    <h4 class="titulo-remedios">Parte Usada</h4>
+                    <p class="texto-remedios">texto</p>
+                </div>
+                <div class="indicacoes">
+                    <h4 class="titulo-remedios">Indicações</h4>
+                    <p class="texto-remedios">texto</p>
+                </div>
+                <div class="modo-preparo">
+                    <h4 class="titulo-remedios">Modo de Preparo</h4>
+                    <p class="texto-remedios">texto</p>
+                </div>
+            </div>
+
+            <hr class="linha-vertical">
+
+            <div class="informacao-farmaceutica">
+                <div class="modo-uso">
+                    <h4 class="titulo-remedios">Modo de Uso</h4>
+                    <p class="texto-remedios">texto</p>
+                </div>
+                <div class="contra-indicacoes">
+                    <h4 class="titulo-remedios">Contra Indicações</h4>
+                    <p class="texto-remedios">texto</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="js/novaPagina.js"></script>
+    <script type="module" src="js/dadosPlanilha.js"></script>
+    <script src="js/script.js" defer></script>
+    <script type="module" src="js/busca.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

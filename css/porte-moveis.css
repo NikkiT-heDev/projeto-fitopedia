@@ -1,4 +1,5 @@
-@media only screen and (max-width: 850px) {    
+@media only screen and (max-width: 850px) {
+    .navbar div{width: 45%;}
     #banner-h1 { font-size: 45px; }    
     #imagem-banner { display: none;}
     #home-inicial{ justify-content: center; text-align: center; width: 100%; padding: 0;}

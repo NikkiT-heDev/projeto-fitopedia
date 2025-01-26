@@ -41,13 +41,17 @@ header{
     height: 35px;
 
     border-radius: 20px;
-    border: 0px solid rgb(255, 255, 255);
+    border: 2px solid rgb(0,0,0, 0);
 
     background-image: linear-gradient(to left, rgb(255, 229, 182), rgb(255, 243, 220));
-    background-color: rgba(10, 122, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
 
     filter: brightness(50px);
-    transition: .5s;
+    transition: 0.8s;
+}
+
+#tema-do-site:hover{
+    border: 1px solid rgb(109, 40, 0);
 }
 
 #tema-atual{
@@ -79,12 +83,63 @@ header{
 #banner-h1{
     font-size: 16vh;
 }
-
+/*
 .barraBotao{
     width: 35px;
     border: none;
     background: none;
     display: none;
+}*/
+
+.navbar div{
+    display: flex;
+    align-items: center;
+
+    width: 25%;
+    height: 100%;
+
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+}
+
+#pesquisar-navbar{
+    display: flex;
+    align-items: center;
+    
+    height: 35px;
+    width: 55%;
+    font-size: 2vh;
+
+    justify-content: center;
+    border: 1px solid transparent;
+
+    transition: 0.5s;
+}
+
+#pesquisar-navbar:hover{
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+#pesquisar-navbar:active{
+    background-color: #6bed00;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.422);
+}
+
+#pesquisar-navbar h2{
+    text-align: center;
+    padding: 5px;
+
+    color: white;
+    font-weight: normal;
+}
+
+#img-navbar{
+    width: 12%;
+    filter: invert(100%);
 }
 
 #imagem-banner{
@@ -93,42 +148,13 @@ header{
     align-items: center;
     justify-content: center;
 }
+/*
 
-.barra{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#barra-de-pesquisa{
-    margin-top: 20px;
-}
-
-.barraInput, .barraInput:autofill {
-    height: 15px;
-    width: 400px;
-    border: 0px;
-    border-bottom: 1px solid;
-    padding: 10px;
-    background: none;
-    transition: .5s;
-}
-
-.barraInput:autofill{
-    border-radius: 20px;
-} 
-
-.barraInput:focus{
-    border-radius: 20px;
-    outline: none;
-    border: none;
-    border: 1px solid;
-}
-
+*/
 #banner, #imagem-banner{
     transition: 1.5s;
 }
-
+/*
 .barraBotao  img{
     opacity: 0;
     transition: opacity .5s ease;
@@ -136,7 +162,7 @@ header{
 
 .barraBotao  img:hover{
     cursor: pointer;
-}
+}*/
 
 #animacao-home{
     display:flex; 

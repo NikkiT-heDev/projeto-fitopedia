@@ -1,13 +1,509 @@
-#pagina-de-pesquisa{
+body{
+    font-family: 'Bubbleboddy Neue Trial', sans-serif;
     min-height: 100vh;
     width: 100%;
-    background-color: rgb(18, 92, 0);
+    background-color: #e4e4e4;
 }
 
-#transicao{
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    top: 0%;
+.card-planta-extendido{
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color:#f9f9f9 ;
+    color: rgb(0, 82, 0);
+    border-radius: 10px;
+
+    width: 90%;
+    height: 12vh;
+    margin: auto;
+
+    margin-top: 1.5vh;
+    transition: 0.5s;
+}
+
+.card-planta-extendido:hover{
+    background-color: #ffffff;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.informacoes-card-extendido{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.informacoes-card-extendido div{
+    margin-left: 20px;
+}
+
+.img-card-extendido{
+    cursor: zoom-in;
+    width: 12vh;
+    height: 12vh;
+
+    border-radius: 10px;
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+.img-card-extendido:hover{
+    width: 25vh;
+    height: 25vh;
+
     z-index: 999;
+}
+
+.nome-cientifico-card, .nome-card{
+    margin:0;
+}
+
+.nome-card{
+    font-size: 3vh;
+}
+
+.nome-cientifico-card{
+    font-size: 2vh;
+    color: rgb(32, 187, 32);
+    font-style: italic;
+}
+
+.button-card-extendido{
+    font-size: 2vh;
+    padding: 5px;
+    border-radius: 20px;
+
+    margin-left: -20px;
+    color: white;
+    background-image:linear-gradient(to left, #6bed00,#005f0d);
+    transition: 0.5s;
+}
+
+.button-card-extendido:hover{
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    font-size: 3.5vh;
+}
+/***/
+.card-planta{
+    cursor: pointer;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color:#f9f9f9 ;
+    color: rgb(0, 82, 0);
+    border-radius: 10px;
+
+    min-width: 22%;
+    width: 22%;
+    height: 35vh;
+
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    transition: 0.5s;
+}
+
+.card-planta:hover{
+    background-color: #ffffff;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.informacoes-card{
+    display: flex;
+    flex-direction: column;
+}
+
+.informacoes-card div{
+    margin-top: 5px;
+}
+
+.img-card{
+    width: 100%;
+    margin: auto;
+    height: 100%;
+
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.button-card{
+    text-align: center;
+    font-size: 1vw;
+
+    width: 50%;
+    padding: 5px;
+    border-radius: 20px;
+    margin-left: auto;
+
+    color: white;
+    background: linear-gradient(90deg, #6bed00, #005f0d);
+    transition: all 0.2s linear; /* Ajuste da transição */
+}
+
+.button-card:hover {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    width: 70%;
+    font-size: 1.5vw;
+    padding: 8px;
+}
+
+.barra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parte-inicial{
+    display: flex;
+    flex-direction: column;
+
+    justify-items: center;
+    align-items: center;
+
+    width: 60%;
+    margin: auto;
+}
+
+#coluna-de-cards{
+    width: 100%;
+    display: flex;
+    
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#barra-de-pesquisa{
+    margin: auto;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.barraInput, .barraInput:autofill {
+    height: 15px;
+    width: 100%;
+    
+    border: 0px;
+    border-bottom: 1px solid;
+    padding: 10px;
+
+    background: none;
+    transition: .5s;
+}
+
+.barraInput:hover, .barraInput:focus{
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    border: 1px solid;
+}
+
+.barraBotao{
+    cursor: pointer;
+    position: absolute;
+
+    transform: translate(-100%) rotate(-10deg);
+    left: 100%;
+    width: 35px;
+
+    border: none;
+    background: none;
+    transition: 0.4s;
+}
+
+.barraBotao:hover{
+    width: 38px;
+    left: 100%;
+    animation: balanco 1s infinite linear;
+}
+
+@keyframes balanco {
+    0%{transform:translate(-100%) rotate(-10deg);}
+    50%{transform:translate(-100%) rotate(10deg);}
+    100%{transform:translate(-100%) rotate(-10deg);}
+}
+
+.grade-cards{
+    margin: auto;
+    color: rgb(0, 62, 0);
+}
+
+.categoria-planta{
+    font-size: 2vh;
+    width: 70%;
+    padding: 20px;
+    margin: auto;
+}
+
+.div-categoria-planta{
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+.div-categoria-planta button{
+    border: none;
+    background: none;
+    font-family: 'Bubbleboddy Neue Trial', sans-serif;
+
+    font-size: 5vh;
+    cursor: pointer;
+    height: 50%;
+}
+.fila-card{
+    justify-content: space-around;
+    overflow: hidden;
+    width: 80%;
+}
+.fila-card, .div-categoria-planta{
+    display: flex;
+}
+
+/*PARTE DO QUADRO INFORMATIVO*/
+
+.informacoes-da-planta{
+    position: absolute;
+    
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+
+    height: 95vh;
+    width: 80vw;
+    margin: auto;
+    
+    overflow-y: scroll;
+    border-radius: 20px;
+
+    background-color: #e4e4e4;
+    border-radius: 20px;
+}
+
+#voltar-pagina{
+    cursor: pointer;
+    border: none;
+    font-family: 'Bubbleboddy Neue Trial', sans-serif;
+
+    color: white;
+    font-weight: 3500;
+
+    font-size: 4vh;
+    width: 7vh;
+    height: 7vh;
+    border-radius: 100%;
+    background-color: red;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.432);
+
+    transition: .3s;
+}
+
+#voltar-pagina:hover{
+    margin-left: -5px;
+    margin-top: -5px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.432);
+    animation: voltarButton 2s infinite;
+}
+
+@keyframes voltarButton {
+    0%{background-color: red;}
+    50%{background-color: rgb(117, 0, 0);}
+    100%{background-color: red;}
+}
+
+.botoes-planta{
+    width: 70%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 10vh;
+    background-image: linear-gradient(to left, #99ed00,#408602);
+
+    border-top-left-radius: 20px;
+    background-color: #ffffff;
+
+    text-align: end;
+    width: 100%;
+}
+
+.botoes-planta hr{
+    width: 2px;
+    margin: 0;
+    border: 0;
+    border-radius: 30%;
+    background-color: #beffbc;
+    height: 50%;
+}
+
+.botaonav{
+    border-radius: 5px;
+
+    width: 40%;
+    font-family: 'Bubbleboddy Neue Trial', sans-serif;
+    font-weight:bold;
+
+    font-size: 3vh;
+    cursor: pointer;
+    color: #024700;
+
+    background: none;
+    padding: 5px;
+
+    border: none;
+    transition: all 0.3s;
+}
+
+.botaonav:hover{
+    background: #105000;
+    color: rgb(208, 255, 197);
+    width: 45%;
+    box-shadow: 5px 5px 3px rgb(47, 122, 15);
+}
+
+#nome-planta{
+    font-size: 5vh;
+    width: 60%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+    color: #052a00;
+}
+
+.quadrado-fotos-planta{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 30px;
+    background-color: #408602;
+
+    width: 80%;
+    margin: auto;
+
+    padding: 20px;
+    text-align: center;
+}
+
+.fotos-planta{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.imgs-planta{
+    border-radius: 20px;
+    width: 30%;
+
+    object-fit: cover;
+
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.imgs-planta:hover{
+    transform: scale(1.1);
+}
+
+#nomecientifico{
+    word-spacing: 2px;
+    font-style: italic;
+    margin: 0;
+
+    font-size: 4vh;
+    color: #ffffff;
+
+}
+
+.linha-vertical{
+    width: 3px;
+    height: 50vh;
+    background-color: black;
+    border-radius: 20px;
+    text-align: center;
+    margin: 5%;
+    border: none;
+}
+
+.preparacao{ 
+    font-size: 3vh;
+    text-align: center;
+    color: #052a00;
+}
+
+#nome-remedio{
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.img-capsulas{
+    margin: auto;
+    text-align: center;
+    height: 75px;
+}
+
+.img-capsulas, .img-capsulas img{
+    width: 20vh;
+    object-fit: cover;
+    height: 20vh;
+}
+
+.quadrado-informativo{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+
+    transition: 1s;
+}
+
+.informacores-farmaceuticas{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    
+    width: 90%;
+}
+/*
+.informacores-farmaceutica div{
+    width: 35%;
+    background-color: #56b800;
+}*/
+
+.informacao-farmaceutica{
+    width: 35%;
+    text-align: left;
+}
+
+
+.titulo-remedios{
+    text-align: center;
+    font-size: 3vh;
+    border-radius: 50px;
+    background-image: linear-gradient(to left, #336d00, #56b800);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.texto-remedios{
+    font-family: 'Cabo Rounded', sans-serif;
+    font-size: 3vh;
+
+    text-align: justify;
+    color: rgb(26, 26, 26);
 }

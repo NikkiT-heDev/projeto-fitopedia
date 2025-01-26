@@ -6,28 +6,18 @@ var elementos = document.body.children;
 var homeInicial = document.querySelector("#home-inicial")
 
 //Adicionar uma animação na barra de pesquisa
-var barraDePesquisa = document.querySelector("#barra");
+/*
+var barra = document.querySelector("#barra-de-pesquisa")
+var inputAtual = barra.querySelector("input")
 
-var barras = document.querySelectorAll(".barra")
-var barraDiv = document.querySelector("#barra-de-pesquisa")
-var divPesquisas = document.querySelector("#pagina-de-pesquisa")
+inputAtual.addEventListener("focus", function() {
+    animacaoBarraOn(barra.querySelector("button"));
 
-barraDePesquisa.addEventListener("click", ativarNovaPaginaPesquisa)
-var buttonVoltarPagina = document.querySelector("#voltar-pagina")
+}); 
+inputAtual.addEventListener("blur", function() {
+    animacaoBarraOff(barra.querySelector("button"))
+}) 
 
-buttonVoltarPagina.addEventListener("click",desativarNovaPaginaPesquisa)
-
-barras.forEach(barra => { // Ativa a animação para todas as tags com classe Barra 
-    inputAtual = barra.querySelector("input")
-
-    inputAtual.addEventListener("focus", function() {
-        animacaoBarraOn(barra.querySelector("button"));
-
-    }); 
-    inputAtual.addEventListener("blur", function() {
-        animacaoBarraOff(barra.querySelector("button"))
-    }) 
-})
 
 var barraDePesquisaPlantas = document.querySelector("#barra-de-pesquisa-plantas")
 var displaySalvos = []
@@ -45,7 +35,7 @@ function ativarNovaPaginaPesquisa(){ //Irá ocutar todos os elementos. Com exce�
         divPesquisas.style.display = "block"
     }, 1500)
 
-    transicaoDeTelas()*/
+    transicaoDeTelas()
 }
 
 var transicaoAtiva = false
@@ -98,14 +88,10 @@ function animacaoBarraOff (botaoAtual){
         botaoAtual.style.display = "none"
     },150)
 }
-
+*/
 //Adicionar uma animação na alteração de tema
-var divTema = document.querySelector("#tema-do-site");
-var divTemaAtual = divTema.querySelector("#tema-atual")
 
-divTema.addEventListener("click",alterarTema)
 
-var direcaoTemaPixel = divTemaAtual.style.marginLeft
 var novoTema = ""
 
 var direcaoTema = ""
@@ -144,7 +130,10 @@ function temaEscuro(){
     gradienteVerdeLado.forEach(elemento => {elemento.style.backgroundImage = "linear-gradient(to left, #99ed00, #408602)"})
 }
 
-function alterarTema(){
+function alterarTema(divTema){
+    var divTemaAtual = divTema.querySelector("#tema-atual")
+    var direcaoTemaPixel = divTemaAtual.style.marginLeft
+
     if(!ativoTema){
         ativoTema = true
         var nomeDaImagem = window.getComputedStyle(divTemaAtual).backgroundImage
