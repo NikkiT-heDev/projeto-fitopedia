@@ -17,7 +17,8 @@ header{
     top: 0;
     padding: 10px 50px;
     transition: 1s;
-    background-image: linear-gradient(to left, #99ed00,#408602);
+    /*#17df0c,#00500a*/
+    background-image: linear-gradient(to left, #17df0c,#00500a);
     z-index: 999;
 }
 
@@ -613,7 +614,7 @@ h2.red.center {
     left: 0;
     height: 100%;
     width: 10px;
-    background: linear-gradient(to top, #012200, #3bed00);
+    background: linear-gradient(to top, #012200, #17df0c);
 }
 
 .core-tabSec p { 

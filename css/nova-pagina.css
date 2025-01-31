@@ -13,7 +13,7 @@ body{
     justify-content: space-between;
 
     background-color:#f9f9f9 ;
-    color: rgb(0, 82, 0);
+    color: #005200;
     border-radius: 10px;
 
     width: 90%;
@@ -67,7 +67,7 @@ body{
 
 .nome-cientifico-card{
     font-size: 2vh;
-    color: rgb(32, 187, 32);
+    color: #20bb20;
     font-style: italic;
 }
 
@@ -78,7 +78,7 @@ body{
 
     margin-left: -20px;
     color: white;
-    background-image:linear-gradient(to left, #6bed00,#005f0d);
+    background-image:linear-gradient(to left, #17df0c,#00500a);
     transition: 0.5s;
 }
 
@@ -96,7 +96,7 @@ body{
     justify-content: space-between;
 
     background-color:#f9f9f9 ;
-    color: rgb(0, 82, 0);
+    color: #005200;
     border-radius: 10px;
 
     min-width: 22%;
@@ -141,7 +141,7 @@ body{
     margin-left: auto;
 
     color: white;
-    background: linear-gradient(90deg, #6bed00, #005f0d);
+    background: linear-gradient(90deg, #17df0c,#00500a);
     transition: all 0.2s linear; /* Ajuste da transição */
 }
 
@@ -231,7 +231,7 @@ body{
 
 .grade-cards{
     margin: auto;
-    color: rgb(0, 62, 0);
+    color: #003e00;
 }
 
 .categoria-planta{
@@ -331,7 +331,7 @@ body{
     align-items: center;
 
     height: 10vh;
-    background-image: linear-gradient(to left, #99ed00,#408602);
+    background-image: linear-gradient(to left, #17df0c,#00500a);
 
     border-top-left-radius: 20px;
     background-color: #ffffff;
@@ -358,7 +358,7 @@ body{
 
     font-size: 3vh;
     cursor: pointer;
-    color: #024700;
+    color: #a1ff9e;
 
     background: none;
     padding: 5px;
@@ -368,10 +368,16 @@ body{
 }
 
 .botaonav:hover{
-    background: #105000;
+    background: #03be00;
     color: rgb(208, 255, 197);
     width: 45%;
-    box-shadow: 5px 5px 3px rgb(47, 122, 15);
+    box-shadow: 5px 5px 3px rgb(24, 82, 26);
+}
+
+.botaonav:active {
+    box-shadow: 0 0 0 0 #408602,
+    inset 4px 4px 4px #408602;
+    transform: translate(6px, 6px);
 }
 
 #nome-planta{
@@ -390,7 +396,7 @@ body{
     flex-direction: column;
     gap: 30px;
     border-radius: 30px;
-    background-color: #408602;
+    background-color: #00500a;
 
     width: 80%;
     margin: auto;
@@ -495,7 +501,7 @@ body{
     text-align: center;
     font-size: 3vh;
     border-radius: 50px;
-    background-image: linear-gradient(to left, #336d00, #56b800);
+    background-image: linear-gradient(to left, #17df0c,#00500a);
     padding-top: 5px;
     padding-bottom: 5px;
 }
