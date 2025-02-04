@@ -7,6 +7,7 @@ const lupa = barraDePesquisa.querySelector("button")
 console.log(barra)
 
 document.addEventListener("DOMContentLoaded", function () {
+    gerarPlantasRecomendadas()
     carregarPlantas()
 })
 
@@ -256,3 +257,77 @@ var voltarButton = document.querySelector("#voltar-pagina")
 voltarButton.addEventListener('click',function(){
     ocultarInformacoes()
 })
+
+
+//Gerar cards quadriculares quando a página for carregada
+
+/*function cardQuadricular(planta,img, nomeP, nomeC){ //Replica todas os elementos para padronizar os cards
+
+    var div1 = document.createElement("div")
+    div1.classList.add("card-planta-extendido")
+
+    var div2 = document.createElement("div")
+    div2.classList.add("informacoes-card-extendido")
+
+    var imagem = document.createElement("img")
+    imagem.classList.add("img-card-extendido")
+    imagem.alt = "Imagem da Planta"
+    imagem.src = img
+
+    var div3 = document.createElement("div")
+
+    var h1 = document.createElement("h1")
+    h1.innerText = nomeP
+    h1.classList.add("nome-planta")
+    h1.classList.add("nome-card")
+
+    var h2 = document.createElement("h2")
+    h2.innerText = "Informações"
+    h2.classList.add("button-card-extendido")
+    h2.classList.add("botao-card")
+
+    var p = document.createElement("p")
+    p.classList.add("nome-cientifico")
+    p.classList.add("nome-cientifico-card")
+    p.innerText = nomeC
+
+    div1.appendChild(div2)
+    div1.appendChild(h2)
+
+    div2.appendChild(imagem)
+    div2.appendChild(div3)
+
+    div3.appendChild(h1)
+    div3.appendChild(p)
+
+    h2.addEventListener("click",function(){
+        exibirInformacoes(planta)
+    })
+    
+    return div1
+}*/
+
+
+const ACAO_GASTROINTESTINAL_PC = ['intestinal','intestivo','gastrointestinal','gastrointestinais','flatulência','dispéptico']
+const ACAO_SISTEMA_RESPIRATORIO_PC = ['resfriado', 'sinusite', 'rinofaringite', 'bronquite', 'garganta']
+const ACAO_ANTI_INFLAMATORIA = ['inflamação', 'inflamações', 'anti-inflamatória', 'anti-inflamatório']
+const ACAO_CALMANTE = ['ansiedade', 'insônia', 'sono']
+const ACAO_CICATRIZANTE = ['ferimento', 'cicatrizar', 'cicatrizante']
+
+const CATEGORIAS = [ACAO_SISTEMA_RESPIRATORIO_PC, ACAO_ANTI_INFLAMATORIA, ACAO_CALMANTE, ACAO_CICATRIZANTE, ACAO_GASTROINTESTINAL_PC]
+
+function gerarPlantasRecomendadas(){
+
+}
+
+function gerarCarroselRecomendacoes(){ //Gera as divs de acordo com as categorias adicionadas
+
+}
+
+function plantasRecomendadas(tipo_acao, plantas){//Seleciona as plantas de acordo com as acoes que cada uma possui
+
+}
+
+function cardQuadricular(){ //Gera os quadrados onde irá ficar as plantas
+
+}
