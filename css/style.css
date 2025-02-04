@@ -18,7 +18,7 @@ header{
     padding: 10px 50px;
     transition: 1s;
     /*#17df0c,#00500a*/
-    background-image: linear-gradient(to left, #17df0c,#00500a);
+    background-image: linear-gradient(to left, #17df0c,#012200);
     z-index: 999;
 }
 
@@ -195,7 +195,7 @@ a{
         0 100%
       );
     
-    background: rgb(0, 68, 0);
+    background: #004400;
     animation: tr1 5s linear 1s infinite;
 }
 
@@ -218,7 +218,7 @@ a{
         0 100%
       );
     
-    background: rgb(0, 15, 0);
+    background: #000f00;
     animation: tr2 4s linear infinite;
 
 }
@@ -242,7 +242,7 @@ a{
         0 100%
       );
     
-    background: rgb(87, 128, 87);
+    background: #578057;
     animation: tr3 3s linear 2s infinite;
 
 }
