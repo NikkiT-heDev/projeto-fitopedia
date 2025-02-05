@@ -204,7 +204,7 @@ a{
         0 100%
       );
     
-    background: #004400;
+    background: #047800;
     animation: tr1 5s linear 1s infinite;
 }
 
@@ -227,7 +227,7 @@ a{
         0 100%
       );
     
-    background: #000f00;
+    background: #012200;
     animation: tr2 4s linear infinite;
 
 }
@@ -251,7 +251,7 @@ a{
         0 100%
       );
     
-    background: #578057;
+    background: #17df0c;
     animation: tr3 3s linear 2s infinite;
 
 }
@@ -705,7 +705,7 @@ ul.core-tabNav {
 
     object-fit: cover;
     overflow: hidden;
-    box-shadow: 0px 30px 30px #020008, inset 0 0 0 1000px #020008;
+    box-shadow: 0px 30px 30px #02000887, inset 0 0 0 1000px #020008;
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -741,7 +741,7 @@ ul.core-tabNav {
 }
 
 .conteudo .caixa-conteudo h3 {
-    color: white;
+    color: #012200;
     font-weight: 700;
     font-size: 1.5rem;
     text-align: center;
@@ -762,7 +762,7 @@ ul.core-tabNav {
     font-size: 0.9rem;
     font-weight: 500;
     text-transform: initial;
-    color: var(--white);
+    color: #012200;
 }
 
 .conteudo .social {

@@ -99,8 +99,15 @@ var inverterCor = ""
 var ativoTema = false
 
 var inverterEscala = document.querySelectorAll(".inverterEscala")
-var verde1 = document.querySelectorAll(".verde1")
+var verde1 = document.querySelectorAll(".verde-escuro")
 var bordaPB = document.querySelectorAll(".bordaPB")
+var caixaCinza = document.querySelectorAll(".caixaCinza")
+var caixaModo = document.querySelectorAll(".caixa-modo")
+var cinza1 = document.querySelectorAll(".subtitulos-cinza")
+var verdeT1 = document.querySelectorAll(".verdeT1")
+var verdeT2 = document.querySelectorAll(".verdeT2")
+var tituloCaixas = document.querySelectorAll(".titulo-caixas")
+var iconesCor = document.querySelectorAll(".icones-cor")
 
 var corBranca = document.querySelectorAll(".branco")
 var corPreta = document.querySelectorAll(".preto")
@@ -109,25 +116,39 @@ var gradienteVerdeTop = document.querySelectorAll(".gradienteVerdeTop")
 var gradienteVerdeLado = document.querySelectorAll(".gradienteVerdeLado")
 
 function temaClaro(){
-    verde1.forEach(elemento => {elemento.style.color = "#2b6200"});
+    verde1.forEach(elemento => {elemento.style.color = "#012200"});
     bordaPB.forEach(elemento => {elemento.style.borderColor = "#000000"})
+    caixaCinza.forEach(elemento => {elemento.style.backgroundColor = "white"})
+    caixaModo.forEach(elemento => {elemento.style.borderColor = "white"})
     inverterEscala.forEach(elemento => {elemento.style.filter = "invert(0%)"})
     corPreta.forEach(elemento => {elemento.style.color = "#000000"})
+    cinza1.forEach(elemento => {elemento.style.color = "#646464"})
+    verdeT1.forEach(elemento => {elemento.style.backgroundColor = "#17df0c"})
+    verdeT2.forEach(elemento => {elemento.style.backgroundColor = "#012200"})
+    tituloCaixas.forEach(elemento => {elemento.style.color = "#012200"})
+    iconesCor.forEach(elemento => {elemento.style.color = "#012200"})
 
     body.style.backgroundColor = "#eee"
-    gradienteVerdeTop.forEach(elemento => {elemento.style.backgroundImage = "linear-gradient(to bottom, #3bed00, #012200"})
-    gradienteVerdeLado.forEach(elemento => {elemento.style.backgroundImage = "linear-gradient(to right, #99ed00, #408602)"})
+    gradienteVerdeTop.forEach(elemento => {elemento.style.backgroundImage = "linear-gradient(to bottom, #17df0c, #012200)"})
+    gradienteVerdeLado.forEach(elemento => {elemento.style.backgroundImage = "linear-gradient(to left, #17df0c, #012200)"})
 }
 
 function temaEscuro(){
-    verde1.forEach(elemento => {elemento.style.color = "#85e838"});
+    verde1.forEach(elemento => {elemento.style.color = "#17df0c"});
     bordaPB.forEach(elemento => {elemento.style.borderColor = "#ffffff"})
+    caixaCinza.forEach(elemento => {elemento.style.backgroundColor = "#3d413e"})
+    caixaModo.forEach(elemento => {elemento.style.borderColor = "#3d413e"})
     inverterEscala.forEach(elemento => {elemento.style.filter = "invert(100%)"})
     corBranca.forEach(elemento => {elemento.style.color = "#ffffff"})
+    cinza1.forEach(elemento => {elemento.style.color = "#dadada"})
+    verdeT1.forEach(elemento => {elemento.style.backgroundColor = "#012200"})
+    verdeT2.forEach(elemento => {elemento.style.backgroundColor = "#17df0c"})
+    tituloCaixas.forEach(elemento => {elemento.style.color = "#17df0c"})
+    iconesCor.forEach(elemento => {elemento.style.color = "#17df0c"})
 
     body.style.backgroundColor = "#272924" 
-    gradienteVerdeTop.forEach(elemento => {elemento.style.backgroundImage = "linear-gradient(to top, #3bed00, #012200)"})
-    gradienteVerdeLado.forEach(elemento => {elemento.style.backgroundImage = "linear-gradient(to left, #99ed00, #408602)"})
+    gradienteVerdeTop.forEach(elemento => {elemento.style.backgroundImage = "linear-gradient(to top, #17df0c, #012200)"})
+    gradienteVerdeLado.forEach(elemento => {elemento.style.backgroundImage = "linear-gradient(to right, #17df0c, #012200)"})
 }
 
 function alterarTema(divTema){
