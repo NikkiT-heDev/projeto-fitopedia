@@ -2,20 +2,7 @@ var categoriasPlanta = document.querySelectorAll(".categoria-planta")
 var botoesCardAnterior = document.querySelectorAll(".planta-anterior")
 var botoesProximoCard = document.querySelectorAll(".planta-proxima")
 
-botoesCardAnterior.forEach((botao,i) => {
-    console.log(botao.parentElement)
-    botao.addEventListener("click", function(){
-        voltarCard(botao.parentElement)
-    })
-})
-
-botoesProximoCard.forEach((botao,i) => {
-    botao.addEventListener("click", function(){
-        proximoCard(botao.parentElement)
-    })
-})
-
-var cardAtual = 2
+var cardAtual = 1
 
 categoriasPlanta.forEach(categoria =>{
     var cards = categoria.querySelectorAll(".card-planta")
@@ -25,7 +12,9 @@ categoriasPlanta.forEach(categoria =>{
 })
 
 
-function proximoCard(categorias){
+export function proximoCard(botao){
+    console.log(botao)
+    var categorias = botao.parentElement
     var cardsPlanta = categorias.querySelectorAll(".card-planta")
     var tamanho = cardsPlanta.length
 
@@ -33,14 +22,14 @@ function proximoCard(categorias){
         if(cardAtual < tamanho-1){ //Se o card for menor q o penultimo, o card atual irá aumentar
             cardAtual += 1
             cardsPlanta.forEach((card,i) => {
-                console.log(card)
                 ocultarCards(card,i)
             })
         }
     }
 }
 
-function voltarCard(categorias){
+export function voltarCard(botao){
+    var categorias = botao.parentElement
     var cardsPlanta = categorias.querySelectorAll(".card-planta")
     var tamanho = cardsPlanta.length
     const TAMANHO_MINIMO = 2
@@ -49,7 +38,6 @@ function voltarCard(categorias){
         if(cardAtual > TAMANHO_MINIMO){ //Se o card for maior que o 3º, o card atual irá diminuir
             cardAtual -= 1 //cardAtual = 4
             cardsPlanta.forEach((card,i) => {
-                console.log(card)
                 ocultarCards(card,i)
             })
         }
@@ -71,3 +59,5 @@ function ocultarCards(card,i){
         },800)
     }
 }
+
+export default {proximoCard, voltarCard};

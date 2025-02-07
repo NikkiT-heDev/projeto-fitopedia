@@ -1,4 +1,5 @@
 import carregarPlantas from '../js/dadosPlanilha.js'
+import { proximoCard, voltarCard } from '../js/novaPagina.js'
 
 const barraDePesquisa = document.querySelector("#barra-de-pesquisa")
 const barra = document.querySelector("#barraPlantas")
@@ -7,14 +8,15 @@ const lupa = barraDePesquisa.querySelector("button")
 console.log(barra)
 
 document.addEventListener("DOMContentLoaded", function () {
-    gerarPlantasRecomendadas()
+    const PLANTAS = JSON.parse(localStorage.getItem('plantas'))
+    gerarCarroselRecomendacoes(PLANTAS)
     carregarPlantas()
 })
 
 barra.addEventListener("keyup", function(valor){
     console.log(barra.value)
-    const plantas = JSON.parse(localStorage.getItem('plantas'))
-    procurarPlantas(plantas,barra.value)
+    const PLANTAS = JSON.parse(localStorage.getItem('plantas'))
+    procurarPlantas(PLANTAS,barra.value)
 })
 
 function procurarPlantas(plantas,valor){ //Procura na planilha o valor correspondente ao digitado
@@ -25,7 +27,6 @@ function procurarPlantas(plantas,valor){ //Procura na planilha o valor correspon
             var nomesPopulares = planta.nomes_populares  || []
             var nomesCientificos = planta.nomes_cientifico || []
 
-            console.log(valor)
             if (nomesPopulares.toLowerCase().includes(valor.toLowerCase()) || nomesCientificos.toLowerCase().includes(valor.toLowerCase())){
                 
                 criarCards(planta,colunaCards)
@@ -236,7 +237,7 @@ function ocultarInformacoes(){
 
     for (let i = 0; i < elementosBody.length; i++) {
         var elemento = elementosBody[i]
-        console.log(elemento.tagName === document.createElement("script").tagName)
+
         if (!(elemento.tagName === document.createElement("script").tagName)){
             if(elemento.className === "parte-inicial"){
                 elemento.style.display = "flex"
@@ -259,75 +260,112 @@ voltarButton.addEventListener('click',function(){
 })
 
 
-//Gerar cards quadriculares quando a página for carregada
-
-/*function cardQuadricular(planta,img, nomeP, nomeC){ //Replica todas os elementos para padronizar os cards
-
-    var div1 = document.createElement("div")
-    div1.classList.add("card-planta-extendido")
-
-    var div2 = document.createElement("div")
-    div2.classList.add("informacoes-card-extendido")
-
-    var imagem = document.createElement("img")
-    imagem.classList.add("img-card-extendido")
-    imagem.alt = "Imagem da Planta"
-    imagem.src = img
-
-    var div3 = document.createElement("div")
-
-    var h1 = document.createElement("h1")
-    h1.innerText = nomeP
-    h1.classList.add("nome-planta")
-    h1.classList.add("nome-card")
-
-    var h2 = document.createElement("h2")
-    h2.innerText = "Informações"
-    h2.classList.add("button-card-extendido")
-    h2.classList.add("botao-card")
-
-    var p = document.createElement("p")
-    p.classList.add("nome-cientifico")
-    p.classList.add("nome-cientifico-card")
-    p.innerText = nomeC
-
-    div1.appendChild(div2)
-    div1.appendChild(h2)
-
-    div2.appendChild(imagem)
-    div2.appendChild(div3)
-
-    div3.appendChild(h1)
-    div3.appendChild(p)
-
-    h2.addEventListener("click",function(){
-        exibirInformacoes(planta)
-    })
-    
-    return div1
-}*/
 
 
-const ACAO_GASTROINTESTINAL_PC = ['intestinal','intestivo','gastrointestinal','gastrointestinais','flatulência','dispéptico']
-const ACAO_SISTEMA_RESPIRATORIO_PC = ['resfriado', 'sinusite', 'rinofaringite', 'bronquite', 'garganta']
-const ACAO_ANTI_INFLAMATORIA = ['inflamação', 'inflamações', 'anti-inflamatória', 'anti-inflamatório']
-const ACAO_CALMANTE = ['ansiedade', 'insônia', 'sono']
-const ACAO_CICATRIZANTE = ['ferimento', 'cicatrizar', 'cicatrizante']
+//Palavras chaves para encontrar as plantas de cada categoria
+const ACAO_GASTROINTESTINAL_PC = ["Ação Gastrointestinal",'intestinal','intestivo','gastrointestinal','gastrointestinais','flatulência','dispéptico']
+const ACAO_SISTEMA_RESPIRATORIO_PC = ["Ação no Tratamento Respiratório",'resfriado', 'sinusite', 'rinofaringite', 'bronquite', 'garganta']
+const ACAO_ANTI_INFLAMATORIA = ["Ação Anti-Inflamatório",'inflamação', 'inflamações', 'anti-inflamatória', 'anti-inflamatório']
+const ACAO_CALMANTE = ["Efeito Calmante",'ansiedade', 'insônia', 'sono']
+const ACAO_CICATRIZANTE = ["Ação Cicatrizante",'ferimento', 'cicatrizar', 'cicatrizante']
 
 const CATEGORIAS = [ACAO_SISTEMA_RESPIRATORIO_PC, ACAO_ANTI_INFLAMATORIA, ACAO_CALMANTE, ACAO_CICATRIZANTE, ACAO_GASTROINTESTINAL_PC]
 
-function gerarPlantasRecomendadas(){
+var CARD_ATUAL_INDEX = 1
 
+function gerarCarroselRecomendacoes(plantas){ //Gera as divs de acordo com as categorias adicionadas
+    CATEGORIAS.forEach((categoria, i) => {
+        var nomeCategoria = categoria[0]
+        var divCategoria = cardCarrosel(nomeCategoria)
+
+        console.log("Categoria: "+ nomeCategoria)
+        plantas.forEach(planta => {
+            var plantaAdicionada = false
+
+            var indicacaoRemedio = planta.indicacao
+            var indicacoesExtemporaneas = planta.indicacoes_extemporaneas
+
+            
+            categoria.forEach(password => {
+                if (plantaAdicionada === false){//Se uma planta for adicionada, plantaAdicionada = true
+                    if(indicacaoRemedio.toLowerCase().includes(password.toLowerCase()) || indicacoesExtemporaneas.toLowerCase().includes(password.toLowerCase())){
+                        plantaAdicionada = true
+                        gerarPlantasRecomendadas(divCategoria,planta)
+                    }
+                }
+            })
+
+            
+        })
+
+        atualizarCards(divCategoria)
+    })
 }
 
-function gerarCarroselRecomendacoes(){ //Gera as divs de acordo com as categorias adicionadas
+var gradeCards = document.querySelectorAll(".grade-cards")[0]
+var categoriaGrade = gradeCards.querySelectorAll(".categoria-planta")[0]
 
+const CARACTERES_MAXIMO = 15
+
+function gerarPlantasRecomendadas(divCategoria, planta){//Seleciona as plantas de acordo com as acoes que cada uma possui
+    var cardPlanta = divCategoria.querySelector("#card-planta-exemplo").cloneNode(true)
+    console.log("Display:" + cardPlanta.style.display)
+    cardPlanta.id = " "
+
+    cardPlanta.classList.add("card-planta")
+
+    var imgCard = cardPlanta.querySelectorAll(".img-card")[0]
+    var nomePopularDiv = cardPlanta.querySelectorAll(".nome-planta")[0]
+    var nomeCientificoDiv = cardPlanta.querySelectorAll(".nome-cientifico")[0]
+
+    var srcImg = planta.imagem_demonstracao1 || SRC_PLANTA_PADRAO
+    var nomePopular = planta.nomes_populares
+    var nomeCientifico = planta.nomes_cientifico
+
+    imgCard.src = srcImg
+    nomeCientificoDiv.innerText = nomeCientifico
+
+    if (nomePopular.length >= CARACTERES_MAXIMO){
+        var nomeResumido = nomePopular.slice(0,CARACTERES_MAXIMO - 1)
+        nomePopularDiv.innerText = nomeResumido+"..."
+    }else{
+        nomePopularDiv.innerText =  nomePopular
+    }
+
+    var plantaSucessoraButton = divCategoria.querySelectorAll(".planta-proxima")[0]
+    divCategoria.insertBefore(cardPlanta,plantaSucessoraButton)
+    cardPlanta.style.display = "block"
 }
 
-function plantasRecomendadas(tipo_acao, plantas){//Seleciona as plantas de acordo com as acoes que cada uma possui
+function cardCarrosel(nomeCategoria){ //Gera os quadrados onde irá ficar as plantas
 
+    var cloneCategoriaGrade = categoriaGrade.cloneNode(true)
+
+    var tituloCategoria = cloneCategoriaGrade.querySelectorAll(".titulo-categoria")[0]
+    var divCategoriaPlanta = cloneCategoriaGrade.querySelectorAll(".div-categoria-planta")[0]
+
+    tituloCategoria.innerText = nomeCategoria
+
+    var nomeClasse = nomeCategoria.toLowerCase().replace(/ /g, "a")
+    divCategoriaPlanta.classList.add(nomeClasse)
+
+    gradeCards.appendChild(cloneCategoriaGrade)
+    cloneCategoriaGrade.style.display = "block"
+
+    return divCategoriaPlanta
 }
 
-function cardQuadricular(){ //Gera os quadrados onde irá ficar as plantas
+function atualizarCards(divCategoria){
+    var plantaSucessoraButton = divCategoria.querySelectorAll(".planta-proxima")[0]
+    var plantaAntecessoraButton = divCategoria.querySelectorAll(".planta-anterior")[0]
 
+    plantaSucessoraButton.addEventListener("click", function(){
+        proximoCard(plantaSucessoraButton)
+    })
+
+    plantaAntecessoraButton.addEventListener("click", function(){
+        voltarCard(plantaAntecessoraButton)
+    })
+
+    proximoCard(plantaSucessoraButton)
 }
