@@ -13,7 +13,7 @@ body{
     justify-content: space-between;
 
     background-color:#f9f9f9 ;
-    color: #005200;
+    color: #012200;
     border-radius: 10px;
 
     width: 90%;
@@ -67,7 +67,7 @@ body{
 
 .nome-cientifico-card{
     font-size: 2vh;
-    color: #20bb20;
+    color: #17df0c;
     font-style: italic;
 }
 
@@ -78,7 +78,7 @@ body{
 
     margin-left: -20px;
     color: white;
-    background-image:linear-gradient(to left, #17df0c,#00500a);
+    background-image:linear-gradient(to left, #17df0c, #012200);
     transition: 0.5s;
 }
 
@@ -96,7 +96,7 @@ body{
     justify-content: space-between;
 
     background-color:#f9f9f9 ;
-    color: #005200;
+    color: #012200;
     border-radius: 10px;
 
     min-width: 22%;
@@ -106,6 +106,7 @@ body{
     margin-right: 2.5%;
     margin-left: 2.5%;
     transition: 0.5s;
+    box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.325)
 }
 
 .card-planta:hover{
@@ -141,7 +142,7 @@ body{
     margin-left: auto;
 
     color: white;
-    background: linear-gradient(90deg, #17df0c,#00500a);
+    background: linear-gradient(to left, #17df0c,#012200);
     transition: all 0.2s linear; /* Ajuste da transição */
 }
 
@@ -231,7 +232,7 @@ body{
 
 .grade-cards{
     margin: auto;
-    color: #003e00;
+    color: #012200;
 }
 
 .categoria-planta{
@@ -260,6 +261,7 @@ body{
     justify-content: space-around;
     overflow: hidden;
     width: 80%;
+    padding-bottom: 20px;
 }
 .fila-card, .div-categoria-planta{
     display: flex;
@@ -331,7 +333,7 @@ body{
     align-items: center;
 
     height: 10vh;
-    background-image: linear-gradient(to left, #17df0c,#00500a);
+    background-image: linear-gradient(to left, #17df0c, #012200);
 
     border-top-left-radius: 20px;
     background-color: #ffffff;
@@ -388,7 +390,7 @@ body{
     margin-right: auto;
 
     text-align: center;
-    color: #052a00;
+    color: #012200;
 }
 
 .quadrado-fotos-planta{
@@ -515,5 +517,9 @@ body{
 }
 
 .titulo-categoria {
-    color: #052a00;
+    color: #012200;
+}
+
+.planta-anterior, .planta-proxima {
+    color: #012200;
 }

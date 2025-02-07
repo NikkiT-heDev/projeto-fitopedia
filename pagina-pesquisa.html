@@ -8,21 +8,24 @@
     <link href="https://fonts.cdnfonts.com/css/bubbleboddy-neue-trial" rel="stylesheet">
     <link rel="stylesheet" href="css/porte-moveis.css">
     <link rel="shortcut icon" href="imgs/icons/favicon-fitopedia.png" type="image/x-icon">
-    <!--Adição do AOS-->
+    <!-- Biblioteca AOS para animações -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="css/nova-pagina.css">
     <link href="https://fonts.cdnfonts.com/css/cabo-rounded" rel="stylesheet">
 </head>
 <body>
+    <!-- Cabeçalho com barra de navegação -->
     <header class="gradienteVerdeLado">
         <nav class="navbar">
             <img id = "logo-navbar" src="imgs/fitopedia-logo-branca.png" alt="Logo" class="inverterEscala">
             
+            <!-- Link para a página inicial -->
             <div>
                 <a href="index.html" id="pesquisar-navbar">
                     <h2>Home</h2>
                     <img id="img-navbar" src="imgs/icons/casa.png" alt="">               
                 </a>
+                <!-- Botão para alternar tema do site -->
                 <button id="tema-do-site" onclick="alterarTema(this)" class="jtfc-right">
                     <div id="tema-atual"></div>
                 </button>
@@ -30,7 +33,7 @@
         </nav>
     </header>
 
-
+    <!-- Área da barra de pesquisa-->
     <div class="parte-inicial">
         <div id="barra-de-pesquisa" class="barra"   data-aos="fade-bottom">
             <input type="text" name="Pesquisar" id="barraPlantas" class="barraInput bordaPB branco preto">
@@ -42,168 +45,173 @@
         <div id="coluna-de-cards"></div>
     </div>
 
+    <!-- Área onde ficarão as categorias de plantas -->
     <div class="grade-cards">
         <div class="categoria-planta" data-aos="fade-up">
-            <h1 class="titulo-categoria">CATEGORIA: SISTEMA GASTROINTESTINAL</h1>
+            <!-- Categoria: Sistema Gastrointestinal -->
+            <h1 class="titulo-categoria verde-escuro">CATEGORIA: SISTEMA GASTROINTESTINAL</h1>
             <div class="sistema-gastrointestinal div-categoria-planta">
-                <button class="planta-anterior"><</button>
+                <button class="planta-anterior verde-escuro"><</button>
                 <div class="fila-card">
-                    <div class="card-planta" style="margin-top: 29px;">
+                    <!-- Card de uma planta -->
+                    <div class="card-planta caixaCinza" style="margin-top: 29px;">
                         <div class="informacoes-card">
                             <img src="https://static.wixstatic.com/media/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg/v1/fill/w_696,h_480,al_c,lg_1,q_80/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg" class="img-card" alt="Imagem da Planta">
                             <div>
-                                <h1 class="nome-planta nome-card">Boldo</h1>
-                                <p class="nome-cientifico nome-cientifico-card">Peumus boldus</p>
+                                <h1 class="nome-planta nome-card verde-escuro">Boldo</h1>
+                                <p class="nome-cientifico nome-cientifico-card verde-claro">Peumus boldus</p>
                             </div>
                         </div>
-                        <h2 class="button-card">Informações</h2>
+                        <h2 class="button-card gradienteVerdeLado">Informações</h2>
                     </div>
-                    <div class="card-planta">
+                    <div class="card-planta caixaCinza">
                         <div class="informacoes-card">
                             <img src="imgs/plantas/macela.png" class="img-card" alt="Imagem da Planta">
                             <div>
-                                <h1 class="nome-planta nome-card">Macela; marcela; macela-do-campo</h1>
-                                <p class="nome-cientifico nome-cientifico-card">Achyrocline satureioides</p>
+                                <h1 class="nome-planta nome-card verde-escuro">Macela; marcela; macela-do-campo</h1>
+                                <p class="nome-cientifico nome-cientifico-card verde-claro">Achyrocline satureioides</p>
                             </div>
                         </div>
-                        <h2 class="button-card">Informações</h2>
+                        <h2 class="button-card gradienteVerdeLado">Informações</h2>
                     </div>
-                    <div class="card-planta">
+                    <div class="card-planta caixaCinza">
                         <div class="informacoes-card">
                             <img src="imgs/plantas/camomila.png" class="img-card" alt="Imagem da Planta">
                             <div>
-                                <h1 class="nome-planta nome-card">Camomila</h1>
-                                <p class="nome-cientifico nome-cientifico-card">Matricaria chamomilla L</p>
+                                <h1 class="nome-planta nome-card verde-escuro">Camomila</h1>
+                                <p class="nome-cientifico nome-cientifico-card verde-claro">Matricaria chamomilla L</p>
                             </div>
                         </div>
-                        <h2 class="button-card">Informações</h2>
+                        <h2 class="button-card gradienteVerdeLado">Informações</h2>
                     </div>
-                    <div class="card-planta">
+                    <div class="card-planta caixaCinza">
                         <div class="informacoes-card">
                             <img src="imgs/plantas/hortela.png" class="img-card" alt="Imagem da Planta">
                             <div>
-                                <h1 class="nome-planta nome-card">Hortelã-pimenta</h1>
-                                <p class="nome-cientifico nome-cientifico-card">Mentha x piperita L.</p>
+                                <h1 class="nome-planta nome-card verde-escuro">Hortelã-pimenta</h1>
+                                <p class="nome-cientifico nome-cientifico-card verde-claro">Mentha x piperita L.</p>
                             </div>
                         </div>
-                        <h2 class="button-card">Informações</h2>
+                        <h2 class="button-card gradienteVerdeLado">Informações</h2>
                     </div>
-                    <div class="card-planta">
+                    <div class="card-planta caixaCinza">
                         <div class="informacoes-card">
                             <img src="https://static.wixstatic.com/media/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg/v1/fill/w_696,h_480,al_c,lg_1,q_80/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg" class="img-card" alt="Imagem da Planta">
                             <div>
-                                <h1 class="nome-planta nome-card">Boldo</h1>
-                                <p class="nome-cientifico nome-cientifico-card">Pelmus boldus</p>
+                                <h1 class="nome-planta nome-card verde-escuro">Boldo</h1>
+                                <p class="nome-cientifico nome-cientifico-card verde-claro">Pelmus boldus</p>
                             </div>
                         </div>
-                        <h2 class="button-card">Informações</h2>
+                        <h2 class="button-card gradienteVerdeLado">Informações</h2>
                     </div><div class="card-planta">
                         <div class="informacoes-card">
                             <img src="https://static.wixstatic.com/media/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg/v1/fill/w_696,h_480,al_c,lg_1,q_80/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg" class="img-card" alt="Imagem da Planta">
                             <div>
-                                <h1 class="nome-planta nome-card">Boldo</h1>
-                                <p class="nome-cientifico nome-cientifico-card">Pelmus boldus</p>
+                                <h1 class="nome-planta nome-card verde-escuro">Boldo</h1>
+                                <p class="nome-cientifico nome-cientifico-card verde-claro">Pelmus boldus</p>
                             </div>
                         </div>
-                        <h2 class="button-card">Informações</h2>
-                    </div><div class="card-planta">
+                        <h2 class="button-card gradienteVerdeLado">Informações</h2>
+                    </div><div class="card-planta caixaCinza">
                         <div class="informacoes-card">
                             <img src="https://static.wixstatic.com/media/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg/v1/fill/w_696,h_480,al_c,lg_1,q_80/95090b_9751eeb535e748ba8f5f2c8661c10a25~mv2.jpg" class="img-card" alt="Imagem da Planta">
                             <div>
-                                <h1 class="nome-planta nome-card">Boldo</h1>
-                                <p class="nome-cientifico nome-cientifico-card">Pelmus boldus</p>
+                                <h1 class="nome-planta nome-card verde-escuro">Boldo</h1>
+                                <p class="nome-cientifico nome-cientifico-card verde-claro">Pelmus boldus</p>
                             </div>
                         </div>
-                        <h2 class="button-card">Informações</h2>
+                        <h2 class="button-card gradienteVerdeLado">Informações</h2>
                     </div>
                 </div>
-                <button class="planta-proxima">></button>
+                <button class="planta-proxima verde-escuro">></button>
             </div>
         </div>
 
         <div class="categoria-planta" data-aos="fade-up">
-            <h1 class="titulo-categoria">CATEGORIA: SISTEMA CARDIOVASCULAR</h1>
+            <!-- Categoria: Sistema Cardiovascular -->
+            <h1 class="titulo-categoria verde-escuro">CATEGORIA: SISTEMA CARDIOVASCULAR</h1>
             <div class="sistema-cardiovascular div-categoria-planta">
-                <button class="planta-anterior"><</button>
+                <button class="planta-anterior verde-escuro"><</button>
                 <div class="fila-card">
-                    <div class="card-planta">
+                    <div class="card-planta caixaCinza">
                         <div class="informacoes-card">
                             <img src="imgs/plantas/cavalinha.png" class="img-card" alt="Imagem da Planta">
                             <div>
-                                <h1 class="nome-planta nome-card">Cavalinha</h1>
-                                <p class="nome-cientifico nome-cientifico-card">Equisetum arvense L</p>
+                                <h1 class="nome-planta nome-card verde-escuro">Cavalinha</h1>
+                                <p class="nome-cientifico nome-cientifico-card verde-claro">Equisetum arvense L</p>
                             </div>
                         </div>
-                        <h2 class="button-card">Informações</h2>
+                        <h2 class="button-card gradienteVerdeLado">Informações</h2>
                     </div>
-                    <div class="card-planta">
+                    <div class="card-planta caixaCinza">
                         <div class="informacoes-card">
                             <img src="imgs/plantas/gengibre.png" class="img-card" alt="Imagem da Planta">
                             <div>
-                                <h1 class="nome-planta nome-card">Gengibre</h1>
-                                <p class="nome-cientifico nome-cientifico-card">Zingiber officinale Roscoe</p>
+                                <h1 class="nome-planta nome-card verde-escuro">Gengibre</h1>
+                                <p class="nome-cientifico nome-cientifico-card verde-claro">Zingiber officinale Roscoe</p>
                             </div>
                         </div>
-                        <h2 class="button-card">Informações</h2>
+                        <h2 class="button-card gradienteVerdeLado">Informações</h2>
                     </div>
-                    <div class="card-planta">
+                    <div class="card-planta caixaCinza">
                         <div class="informacoes-card">
                             <img src="imgs/plantas/alho.png" class="img-card" alt="Imagem da Planta">
                             <div>
-                                <h1 class="nome-planta nome-card">Alho</h1>
-                                <p class="nome-cientifico nome-cientifico-card">Allium sativum L.</p>
+                                <h1 class="nome-planta nome-card verde-escuro">Alho</h1>
+                                <p class="nome-cientifico nome-cientifico-card verde-claro">Allium sativum L.</p>
                             </div>
                         </div>
-                        <h2 class="button-card">Informações</h2>
+                        <h2 class="button-card gradienteVerdeLado">Informações</h2>
                     </div>
                 </div>
-                <button class="planta-proxima">></button>
+                <button class="planta-proxima verde-escuro">></button>
             </div>
         </div>
     </div>
 
     <div class="categoria-planta" data-aos="fade-up">
-        <h1 class="titulo-categoria">CATEGORIA: SISTEMA NERVOSO</h1>
+        <!-- Categoria: Sistema Nervoso -->
+        <h1 class="titulo-categoria verde-escuro">CATEGORIA: SISTEMA NERVOSO</h1>
         <div class="sistema-nervoso div-categoria-planta">
-            <button class="planta-anterior"><</button>
+            <button class="planta-anterior verde-escuro"><</button>
             <div class="fila-card">
-                <div class="card-planta">
+                <div class="card-planta caixaCinza">
                     <div class="informacoes-card">
                         <img src="imgs/plantas/erva-cidreira.png" class="img-card" alt="Imagem da Planta">
                         <div>
-                            <h1 class="nome-planta nome-card">Erva-cidreira</h1>
-                            <p class="nome-cientifico nome-cientifico-card">Melissa officinalis L</p>
+                            <h1 class="nome-planta nome-card verde-escuro">Erva-cidreira</h1>
+                            <p class="nome-cientifico nome-cientifico-card verde-claro">Melissa officinalis L</p>
                         </div>
                     </div>
-                    <h2 class="button-card">Informações</h2>
+                    <h2 class="button-card gradienteVerdeLado">Informações</h2>
                 </div>
-                <div class="card-planta">
+                <div class="card-planta caixaCinza">
                     <div class="informacoes-card">
                         <img src="imgs/plantas/alecrim.png" class="img-card" alt="Imagem da Planta">
                         <div>
-                            <h1 class="nome-planta nome-card">Alecrim, rosmarino</h1>
-                            <p class="nome-cientifico nome-cientifico-card">Rosmarinus officinalis L</p>
+                            <h1 class="nome-planta nome-card verde-escuro">Alecrim, rosmarino</h1>
+                            <p class="nome-cientifico nome-cientifico-card verde-claro">Rosmarinus officinalis L</p>
                         </div>
                     </div>
-                    <h2 class="button-card">Informações</h2>
+                    <h2 class="button-card gradienteVerdeLado">Informações</h2>
                 </div>
-                <div class="card-planta">
+                <div class="card-planta caixaCinza">
                     <div class="informacoes-card">
                         <img src="imgs/plantas/garra-do-diabo.png" class="img-card" alt="Imagem da Planta">
                         <div>
-                            <h1 class="nome-planta nome-card">Garra-do-diabo</h1>
-                            <p class="nome-cientifico nome-cientifico-card">Harpagophytum procumbens (Burch.) DC. ex Meisn.</p>
+                            <h1 class="nome-planta nome-card verde-escuro">Garra-do-diabo</h1>
+                            <p class="nome-cientifico nome-cientifico-card verde-claro">Harpagophytum procumbens (Burch.) DC. ex Meisn.</p>
                         </div>
                     </div>
-                    <h2 class="button-card">Informações</h2>
+                    <h2 class="button-card gradienteVerdeLado">Informações</h2>
                 </div>
             </div>
-            <button class="planta-proxima">></button>
+            <button class="planta-proxima verde-escuro">></button>
         </div>
     </div>
 </div>
 
-
+    <!-- Aqui fica o código  dos elementos que aparecerão ao pesquisar sobre a planta-->
     <div class="informacoes-da-planta" hidden>
         <div class="header-div">
             <div class="botoes-planta">
@@ -305,6 +313,7 @@
     </div>
     </div>
 
+    <!-- importação dos sripts-->
     <script src="js/novaPagina.js"></script>
     <script type="module" src="js/dadosPlanilha.js"></script>
     <script src="js/script.js" defer></script>

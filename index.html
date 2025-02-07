@@ -8,7 +8,7 @@
     <link href="https://fonts.cdnfonts.com/css/bubbleboddy-neue-trial" rel="stylesheet">
     <link rel="shortcut icon" href="imgs/icons/favicon-fitopedia.png" type="image/x-icon">
     <link rel="stylesheet" href="css/porte-moveis.css">
-    <!--Adição do AOS-->
+    <!--Adição da biblioteca AOS-->
     <!--Animações ocorrem apenas quando o usuário rolar até o elemento, usando uma biblioteca:  AOS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
 
@@ -19,7 +19,7 @@
 </head>
 <body>
     
-
+    <!-- Cabeçalho do site -->
     <header class="gradienteVerdeLado">
         <nav class="navbar">
             <img id = "logo-navbar" src="imgs/fitopedia-logo-branca.png" alt="Logo" class="inverterEscala">
@@ -29,6 +29,7 @@
                     <h2>Pesquisar</h2>
                     <img id="img-navbar" src="imgs/icons/lupa.png" alt="">               
                 </a>
+                <!-- Botão para alterar tema -->
                 <button id="tema-do-site" onclick="alterarTema(this)" class="jtfc-right">
                     <div id="tema-atual"></div>
                 </button>
@@ -36,6 +37,7 @@
         </nav>
     </header>
 
+    <!-- Seção inicial do site -->
     <section id="home-inicial" class="verde-escuro">
         <!--Aqui irá ficar a logo inicial e a barra de pesquisa-->
        
@@ -44,24 +46,24 @@
             <p class="paragrafos">O site perfeito para explorar o poder das plantas através da Fitoterapia</p>
         </div>
         <div id="imagem-banner" class="home" data-aos="fade-left">
-            <img width="70%" src="imgs/notebook-modelo.png" alt="">
+            <img width="70%" src="imgs/fitologo-inicial.png" alt="">
         </div>
     </section>
 
-
+    <!-- Animação decorativa -->
     <div id="animacao-home">
         <div id="triangulo1" class="tr"></div>
         <div id="triangulo2" class="tr verdeT1"></div>
         <div id="triangulo3" class="tr verdeT2"></div>
     </div>
 
-    <!--novo-->
 
     <h2 class="red center verde-escuro" data-aos="fade-up" data-aos-delay="100">SAIBA MAIS SOBRE NÓS</h2>
 
     <div class="core-tab-sec">
         <!-- Navegação das abas -->
         <ul class="core-tabNav branco preto" data-aos="fade-up">
+            <!--Evento "onclick" para simular um botão, ou seja, ao ser clicado ocorrerá um evento-->
             <li><a href="#" onclick="mudarTexto('O FitoPédia é um site desenvolvido com o propósito de ser uma ferramenta completa de busca e aprendizado, ideal para quem deseja aprofundar seus conhecimentos sobre fitoterapia. Esse campo da ciência estuda e aplica o uso de medicamentos cuja composição ativa é baseada em plantas e seus derivados vegetais, com foco em seus benefícios e aplicações medicinais. No FitoPédia, você poderá explorar informações detalhadas sobre as propriedades das plantas, seus princípios ativos, formas de utilização, e como elas podem ser empregadas para promover a saúde e o bem-estar. O site se posiciona como um recurso indispensável para estudantes, profissionais da área da saúde e qualquer pessoa interessada em descobrir os benefícios da medicina natural.', event)">
                 <figure><img src="imgs/icons/sobre-icon.png"alt="sobre"></figure>
                 <div class="subtitulos-cinza">SOBRE</div></a>
@@ -76,12 +78,13 @@
             </li>
         </ul>
     <div></div>
-        <!-- Texto Padrão -->
+        <!-- Área onde o conteúdo das abas será exibido -->
         <div class="core-tabCnt branco preto" >
             <div class="core-tabSec caixaCinza">
+                <a href="#" onclick="mudarTexto('Saiba todos os detalhes do nosso site clicando nos ícones acima. Explore e pesquise na nossa página!', event)">
                 <p class="core-p verde-escuro caixa-modo" id="texto-principal"  data-aos="fade-right">
                     Saiba todos os detalhes do nosso site clicando nos ícones acima. Explore e pesquise na nossa página!
-                </p>
+                </p></a>
             </div>
         </div>
     </div>
@@ -91,10 +94,7 @@
     <div></div>
 
     <!--Área de Pesquisa-->
-
-
-
-
+    <!-- Scripts do site -->
     <script type="module" src="js/dadosPlanilha.js"></script>
     <script src="js/script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
@@ -103,18 +103,18 @@
     </script>
 
     <!--Card Devs-->
-
-    <section id="desenvolvedores" data-aos="fade-up" data-aos-delay="100">
+    <section id="desenvolvedores" data-aos="fade-up" data-aos-delay="100"> <!--A implementação de "data-aos" se dá quando queremos o efeito de delay ao descer a página, assim os elementos vão aparecendo aos poucos e em uma posição específica-->
         <div class="wrapper">
             <h3 class="titulo-dev verde-escuro">DESENVOLVEDORAS</h3>
 
+            <!-- Cartões das desenvolvedoras -->
             <div class="caixa">
                 <div class="card">
                     <div class="dev-img">
                         <img src="imgs/devs/gabrielly.jpg" alt="">
                     </div>
 
-                    <div class="conteudo">
+                    <div class="conteudo"> <!--Os conteúdos só irão aparecer quando o mouse passar em cima do elemento-->
                         <div class="caixa-conteudo">
                             <h3 class="titulo-caixas">Gabrielly Araújo<br><span class="titulo-caixas">Full Stack</span></h3>
                         </div>
@@ -170,4 +170,3 @@
         </div>
     </section>
 </body>
-    

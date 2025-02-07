@@ -100,6 +100,7 @@ var ativoTema = false
 
 var inverterEscala = document.querySelectorAll(".inverterEscala")
 var verde1 = document.querySelectorAll(".verde-escuro")
+var verde2 = document.querySelectorAll(".verde-claro")
 var bordaPB = document.querySelectorAll(".bordaPB")
 var caixaCinza = document.querySelectorAll(".caixaCinza")
 var caixaModo = document.querySelectorAll(".caixa-modo")
@@ -117,6 +118,7 @@ var gradienteVerdeLado = document.querySelectorAll(".gradienteVerdeLado")
 
 function temaClaro(){
     verde1.forEach(elemento => {elemento.style.color = "#012200"});
+    verde2.forEach(elemento => {elemento.style.color = "#17df0c"});
     bordaPB.forEach(elemento => {elemento.style.borderColor = "#000000"})
     caixaCinza.forEach(elemento => {elemento.style.backgroundColor = "white"})
     caixaModo.forEach(elemento => {elemento.style.borderColor = "white"})
@@ -135,6 +137,7 @@ function temaClaro(){
 
 function temaEscuro(){
     verde1.forEach(elemento => {elemento.style.color = "#17df0c"});
+    verde2.forEach(elemento => {elemento.style.color = "#64da5e"});
     bordaPB.forEach(elemento => {elemento.style.borderColor = "#ffffff"})
     caixaCinza.forEach(elemento => {elemento.style.backgroundColor = "#3d413e"})
     caixaModo.forEach(elemento => {elemento.style.borderColor = "#3d413e"})
