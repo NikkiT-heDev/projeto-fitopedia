@@ -4,92 +4,8 @@ var elementos = document.body.children;
 
 //Adaptação do tamanho do home inicial
 var homeInicial = document.querySelector("#home-inicial")
+var animationHome = document.querySelector("home-inicial")
 
-//Adicionar uma animação na barra de pesquisa
-/*
-var barra = document.querySelector("#barra-de-pesquisa")
-var inputAtual = barra.querySelector("input")
-
-inputAtual.addEventListener("focus", function() {
-    animacaoBarraOn(barra.querySelector("button"));
-
-}); 
-inputAtual.addEventListener("blur", function() {
-    animacaoBarraOff(barra.querySelector("button"))
-}) 
-
-
-var barraDePesquisaPlantas = document.querySelector("#barra-de-pesquisa-plantas")
-var displaySalvos = []
-
-function ativarNovaPaginaPesquisa(){ //Irá ocutar todos os elementos. Com exceção da navbar e nova pagina
-/*
-    Array.from(elementos).forEach(elemento => {
-        if(elemento.id !== divPesquisas.id && elemento.tagName !== heade.tagName && elemento.tagName.toLowerCase() !== "script"){
-            displaySalvos.push(window.getComputedStyle(elemento).display)
-            elemento.style.display = "none"
-        }
-    })   
-
-    setTimeout(function (){
-        divPesquisas.style.display = "block"
-    }, 1500)
-
-    transicaoDeTelas()
-}
-
-var transicaoAtiva = false
-
-function transicaoDeTelas(){
-    if (!transicaoAtiva){
-        transicaoAtiva = true
-        var divTransicao = document.querySelector("#transicao")
-        divTransicao.style.display = "block"
-        divTransicao.style.animation = "bodyEscurecer 3s"
-
-        setTimeout(function(){
-            divTransicao.style.display = "none"
-            transicaoAtiva = false
-        },3000)
-    }
-}
-
-function desativarNovaPaginaPesquisa(){
-    transicaoDeTelas()
-
-    setTimeout(function(){
-        Array.from(elementos).forEach((elemento , i) => {
-            if(elemento.id !== divPesquisas.id && elemento.tagName !== heade.tagName){
-                elemento.style.display = displaySalvos[i]
-            }
-            divPesquisas.style.display = "none"
-        })
-    },1500)
-}
-
-function teste(){
-
-}
-
-function animacaoBarraOn (botaoAtual){
-    console.log(123)
-    var imgLupa = botaoAtual.querySelector("img")
-    var botaoAtual = document.querySelector("#"+botaoAtual.id)
-
-    botaoAtual.style.display = "block"
-    imgLupa.style.opacity = 1;
-}
-
-function animacaoBarraOff (botaoAtual){
-    var botaoAtual = document.querySelector("#"+botaoAtual.id)
-    var imgLupa = botaoAtual.querySelectorAll("img")[0]
-    imgLupa.style.opacity = 0;
-    setTimeout(function (){
-        botaoAtual.style.display = "none"
-    },150)
-}
-*/
-//Adicionar uma animação na alteração de tema
 
 
 var novoTema = ""
@@ -98,25 +14,26 @@ var direcaoTema = ""
 var inverterCor = ""
 var ativoTema = false
 
-var inverterEscala = document.querySelectorAll(".inverterEscala")
-var verde1 = document.querySelectorAll(".verde-escuro")
-var verde2 = document.querySelectorAll(".verde-claro")
-var bordaPB = document.querySelectorAll(".bordaPB")
-var caixaCinza = document.querySelectorAll(".caixaCinza")
-var caixaModo = document.querySelectorAll(".caixa-modo")
-var cinza1 = document.querySelectorAll(".subtitulos-cinza")
-var verdeT1 = document.querySelectorAll(".verdeT1")
-var verdeT2 = document.querySelectorAll(".verdeT2")
-var tituloCaixas = document.querySelectorAll(".titulo-caixas")
-var iconesCor = document.querySelectorAll(".icones-cor")
 
-var corBranca = document.querySelectorAll(".branco")
-var corPreta = document.querySelectorAll(".preto")
-
-var gradienteVerdeTop = document.querySelectorAll(".gradienteVerdeTop")
-var gradienteVerdeLado = document.querySelectorAll(".gradienteVerdeLado")
 
 function temaClaro(){
+    var inverterEscala = document.querySelectorAll(".inverterEscala")
+    var verde1 = document.querySelectorAll(".verde-escuro")
+    var verde2 = document.querySelectorAll(".verde-claro")
+    var bordaPB = document.querySelectorAll(".bordaPB")
+    var caixaCinza = document.querySelectorAll(".caixaCinza")
+    var caixaModo = document.querySelectorAll(".caixa-modo")
+    var cinza1 = document.querySelectorAll(".subtitulos-cinza")
+    var verdeT1 = document.querySelectorAll(".verdeT1")
+    var verdeT2 = document.querySelectorAll(".verdeT2")
+    var tituloCaixas = document.querySelectorAll(".titulo-caixas")
+    var iconesCor = document.querySelectorAll(".icones-cor")
+
+    var corBranca = document.querySelectorAll(".branco")
+    var corPreta = document.querySelectorAll(".preto")
+
+    var gradienteVerdeTop = document.querySelectorAll(".gradienteVerdeTop")
+    var gradienteVerdeLado = document.querySelectorAll(".gradienteVerdeLado")
     verde1.forEach(elemento => {elemento.style.color = "#012200"});
     verde2.forEach(elemento => {elemento.style.color = "#17df0c"});
     bordaPB.forEach(elemento => {elemento.style.borderColor = "#000000"})
@@ -136,6 +53,23 @@ function temaClaro(){
 }
 
 function temaEscuro(){
+    var inverterEscala = document.querySelectorAll(".inverterEscala")
+    var verde1 = document.querySelectorAll(".verde-escuro")
+    var verde2 = document.querySelectorAll(".verde-claro")
+    var bordaPB = document.querySelectorAll(".bordaPB")
+    var caixaCinza = document.querySelectorAll(".caixaCinza")
+    var caixaModo = document.querySelectorAll(".caixa-modo")
+    var cinza1 = document.querySelectorAll(".subtitulos-cinza")
+    var verdeT1 = document.querySelectorAll(".verdeT1")
+    var verdeT2 = document.querySelectorAll(".verdeT2")
+    var tituloCaixas = document.querySelectorAll(".titulo-caixas")
+    var iconesCor = document.querySelectorAll(".icones-cor")
+
+    var corBranca = document.querySelectorAll(".branco")
+    var corPreta = document.querySelectorAll(".preto")
+
+    var gradienteVerdeTop = document.querySelectorAll(".gradienteVerdeTop")
+    var gradienteVerdeLado = document.querySelectorAll(".gradienteVerdeLado")
     verde1.forEach(elemento => {elemento.style.color = "#17df0c"});
     verde2.forEach(elemento => {elemento.style.color = "#64da5e"});
     bordaPB.forEach(elemento => {elemento.style.borderColor = "#ffffff"})

@@ -126,7 +126,7 @@ body{
 .img-card{
     width: 100%;
     margin: auto;
-    height: 100%;
+    height: 20vh;
 
     border-radius: 20px;
     object-fit: cover;
@@ -240,10 +240,11 @@ body{
     width: 70%;
     padding: 20px;
     margin: auto;
+
+
 }
 
 .div-categoria-planta{
-
     justify-content: space-around;
     align-items: center;
 }

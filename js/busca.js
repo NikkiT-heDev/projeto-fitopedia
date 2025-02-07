@@ -264,7 +264,7 @@ voltarButton.addEventListener('click',function(){
 
 //Palavras chaves para encontrar as plantas de cada categoria
 const ACAO_GASTROINTESTINAL_PC = ["Ação Gastrointestinal",'intestinal','intestivo','gastrointestinal','gastrointestinais','flatulência','dispéptico']
-const ACAO_SISTEMA_RESPIRATORIO_PC = ["Ação no Tratamento Respiratório",'resfriado', 'sinusite', 'rinofaringite', 'bronquite', 'garganta']
+const ACAO_SISTEMA_RESPIRATORIO_PC = ["Ação no Tratamento Respiratório",'resfriado', 'sinusite', 'rinofaringite', 'bronquite', 'garganta', 'expectorante']
 const ACAO_ANTI_INFLAMATORIA = ["Ação Anti-Inflamatório",'inflamação', 'inflamações', 'anti-inflamatória', 'anti-inflamatório']
 const ACAO_CALMANTE = ["Efeito Calmante",'ansiedade', 'insônia', 'sono']
 const ACAO_CICATRIZANTE = ["Ação Cicatrizante",'ferimento', 'cicatrizar', 'cicatrizante']
@@ -332,8 +332,13 @@ function gerarPlantasRecomendadas(divCategoria, planta){//Seleciona as plantas d
         nomePopularDiv.innerText =  nomePopular
     }
 
-    var plantaSucessoraButton = divCategoria.querySelectorAll(".planta-proxima")[0]
-    divCategoria.insertBefore(cardPlanta,plantaSucessoraButton)
+    var botaoInformacoes = cardPlanta.querySelectorAll(".button-card")[0]
+    botaoInformacoes.addEventListener('click', function(){
+        exibirInformacoes(planta)
+    })
+
+    var filaCard = divCategoria.querySelectorAll(".fila-card")[0]
+    filaCard.appendChild(cardPlanta)
     cardPlanta.style.display = "block"
 }
 
