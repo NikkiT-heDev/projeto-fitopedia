@@ -218,7 +218,6 @@ chaButton.addEventListener("click",function(){
 
 function exibirInformacoes(planta){
     var elementosBody = document.body.children
-    body.style.backgroundColor = "rgb(23, 18, 18)"
 
     for (let i = 0; i < elementosBody.length; i++) {
         var elemento = elementosBody[i]
@@ -231,7 +230,6 @@ function exibirInformacoes(planta){
 
 function ocultarInformacoes(){
     var elementosBody = document.body.children
-    body.style.backgroundColor = "#e4e4e4"
 
     var divInformacoesGerais = document.querySelectorAll(".informacoes-da-planta")[0]
 

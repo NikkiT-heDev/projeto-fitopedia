@@ -2,11 +2,29 @@ var body = document.querySelector("body")
 var heade = document.querySelector("header")
 var elementos = document.body.children;
 
-//Adaptação do tamanho do home inicial
-var homeInicial = document.querySelector("#home-inicial")
-var animationHome = document.querySelector("home-inicial")
 
 
+//Adapta as ondas de acordo com a altura da tela
+window.addEventListener("resize",function(){
+  adaptarHome()
+})
+
+window.addEventListener("DOMContentLoaded",function(){
+  adaptarHome()
+})
+
+
+function adaptarHome(){
+      //Adaptação do tamanho do home inicial
+    var homeInicial = document.querySelector("#home-inicial")
+    var animationHome = document.querySelector("#animacao-home")
+  
+    var alturaCliente = window.innerHeight
+  
+    var alturaHome = alturaCliente - animationHome.offsetHeight - heade.clientHeight
+    console.log(alturaCliente,animationHome.offsetHeight,alturaHome)
+    homeInicial.style.height = alturaHome+"px"
+}
 
 var novoTema = ""
 
@@ -15,7 +33,7 @@ var inverterCor = ""
 var ativoTema = false
 
 
-
+//Todos os elementos com determinadas classes sofreram alterações
 function temaClaro(){
     var inverterEscala = document.querySelectorAll(".inverterEscala")
     var verde1 = document.querySelectorAll(".verde-escuro")
@@ -88,6 +106,8 @@ function temaEscuro(){
     gradienteVerdeLado.forEach(elemento => {elemento.style.backgroundImage = "linear-gradient(to right, #17df0c, #012200)"})
 }
 
+
+//Altera o style e ativa os temas
 function alterarTema(divTema){
     var divTemaAtual = divTema.querySelector("#tema-atual")
     var direcaoTemaPixel = divTemaAtual.style.marginLeft

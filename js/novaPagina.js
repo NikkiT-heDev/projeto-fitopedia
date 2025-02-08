@@ -1,7 +1,4 @@
 var categoriasPlanta = document.querySelectorAll(".categoria-planta")
-var botoesCardAnterior = document.querySelectorAll(".planta-anterior")
-var botoesProximoCard = document.querySelectorAll(".planta-proxima")
-
 var cardAtual = 1
 
 categoriasPlanta.forEach(categoria =>{

@@ -1,9 +1,9 @@
 @media only screen and (max-width: 850px) {
     .navbar div{width: 45%;}
-    #banner-h1 { font-size: 45px; }    
+    #banner-h1 { font-size: 7vh; }    
     #imagem-banner { display: none;}
     #home-inicial{ justify-content: center; text-align: center; width: 100%; padding: 0;}
-    #home-inicial p{margin-top: -42px; font-size: 10px;}
-    #banner{ width: 100%; margin-top: 25px}
+    #home-inicial p{font-size: 10px;}
+    #banner{ width: 80%; margin-top: 25px; padding: 0;}
     #animacao-home{margin: 0;}
 }
